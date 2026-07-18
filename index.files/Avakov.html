@@ -1,0 +1,932 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="Avakov.html.files/p' + i + '.html?s=40e65f20896d2e60" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="3772.97583007813" height="2299" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:none;stroke:none; }
+				.s1 { stroke-dasharray:3,6;stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s2 { stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s3 { cursor:pointer; }
+				.s4 { fill:#FBD27A;stroke:none; }
+				.s5 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s6 { font-size:12px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s7 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s8 { fill:none;stroke:#606060;stroke-width:1; }
+				.s9 { fill:#FFFFFF;stroke:none; }
+				.s10 { fill:#FF9368;stroke:none; }
+				.s11 { fill:#92DDF9;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1">
+		<image id="i613" xlink:href="Avakov.html.files/i613.jpg" x="0" y="0" width="3772.97583007813" height="2299" preserveAspectRatio="none"/>
+	</g>
+	<g id="g2" transform="translate(279,0)">
+		<rect id="r612" class="s0" x="0" y="0" width="2394" height="2299"/>
+	</g>
+	<g id="g3" transform="translate(291,12)">
+		<g id="g4">
+			<line id="l569" class="s1" x1="2190" y1="1342.5" x2="2220" y2="1342.5"/>
+			<line id="l570" class="s2" x1="1590.5" y1="1837.546875" x2="1590.5" y2="2037.546875"/>
+			<line id="l571" class="s2" x1="885.5" y1="1383.28125" x2="885.5" y2="1483.5"/>
+			<line id="l572" class="s2" x1="1590.5" y1="1483.5" x2="1590.5" y2="1583.28125"/>
+			<line id="l573" class="s2" x1="1865.5" y1="1383.28125" x2="1865.5" y2="1483.5"/>
+			<line id="l574" class="s2" x1="2295.5" y1="1383.28125" x2="2295.5" y2="1483.5"/>
+			<line id="l575" class="s2" x1="885.5" y1="1483.5" x2="2295.5" y2="1483.5"/>
+			<line id="l576" class="s2" x1="245.5" y1="896.046875" x2="245.5" y2="996.5"/>
+			<line id="l577" class="s2" x1="885.5" y1="996.5" x2="885.5" y2="1096.046875"/>
+			<line id="l578" class="s2" x1="1015.5" y1="896.046875" x2="1015.5" y2="996.5"/>
+			<line id="l579" class="s2" x1="1525.5" y1="896.046875" x2="1525.5" y2="996.5"/>
+			<line id="l580" class="s2" x1="1775.5" y1="896.046875" x2="1775.5" y2="996.5"/>
+			<line id="l581" class="s2" x1="1865.5" y1="996.5" x2="1865.5" y2="1182.890625"/>
+			<line id="l582" class="s2" x1="1955.5" y1="896.046875" x2="1955.5" y2="996.5"/>
+			<line id="l583" class="s2" x1="2205.5" y1="896.046875" x2="2205.5" y2="1342.5"/>
+			<line id="l584" class="s2" x1="1775.5" y1="996.5" x2="1955.5" y2="996.5"/>
+			<line id="l585" class="s2" x1="245.5" y1="996.5" x2="1525.5" y2="996.5"/>
+			<line id="l586" class="s2" x1="75.5" y1="474.75" x2="75.5" y2="574.5"/>
+			<line id="l587" class="s2" x1="245.5" y1="574.5" x2="245.5" y2="724.203125"/>
+			<line id="l588" class="s2" x1="415.5" y1="474.75" x2="415.5" y2="574.5"/>
+			<line id="l589" class="s2" x1="845.5" y1="474.75" x2="845.5" y2="574.5"/>
+			<line id="l590" class="s2" x1="1015.5" y1="574.5" x2="1015.5" y2="674.75"/>
+			<line id="l591" class="s2" x1="1185.5" y1="474.75" x2="1185.5" y2="574.5"/>
+			<line id="l592" class="s2" x1="1435.5" y1="474.75" x2="1435.5" y2="574.5"/>
+			<line id="l593" class="s2" x1="1525.5" y1="574.5" x2="1525.5" y2="707.71875"/>
+			<line id="l594" class="s2" x1="1615.5" y1="474.75" x2="1615.5" y2="574.5"/>
+			<line id="l595" class="s2" x1="1435.5" y1="574.5" x2="1615.5" y2="574.5"/>
+			<line id="l596" class="s2" x1="845.5" y1="574.5" x2="1185.5" y2="574.5"/>
+			<line id="l597" class="s2" x1="75.5" y1="574.5" x2="415.5" y2="574.5"/>
+			<line id="l598" class="s2" x1="75.5" y1="86.421875" x2="75.5" y2="302.90625"/>
+			<line id="l599" class="s2" x1="325.5" y1="86.421875" x2="325.5" y2="186.5"/>
+			<line id="l600" class="s2" x1="415.5" y1="186.5" x2="415.5" y2="302.90625"/>
+			<line id="l601" class="s2" x1="505.5" y1="86.421875" x2="505.5" y2="186.5"/>
+			<line id="l602" class="s2" x1="755.5" y1="86.421875" x2="755.5" y2="186.5"/>
+			<line id="l603" class="s2" x1="845.5" y1="186.5" x2="845.5" y2="302.90625"/>
+			<line id="l604" class="s2" x1="935.5" y1="86.421875" x2="935.5" y2="186.5"/>
+			<line id="l605" class="s2" x1="1185.5" y1="86.421875" x2="1185.5" y2="286.421875"/>
+			<line id="l606" class="s2" x1="755.5" y1="186.5" x2="935.5" y2="186.5"/>
+			<line id="l607" class="s2" x1="325.5" y1="186.5" x2="505.5" y2="186.5"/>
+		</g>
+		<g id="g5">
+			<g id="g6" transform="translate(0,2037.546875)">
+				<g id="g7" transform="translate(1510.98828125,0)">
+					<g id="g8">
+						<g id="g9">
+							<g id="g10">
+								<g id="g12" at:id="92" class="s3" onclick="nodeclick(92)">
+									<g id="g143" clip-path="url(#g158)">
+										<rect id="r144" class="s4" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+										<image id="i147" xlink:href="Avakov.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t146" transform="translate(3,3)">
+											<text id="ts148" x="93.576171875" y="11.484375" class="s5">Авакова</text>
+											<text id="ts149" x="80" y="27.96875" class="s5">(Майраменц)</text>
+											<text id="ts150" x="93.599609375" y="44.453125" class="s5">Ханзаде</text>
+											<text id="ts151" x="80.509765625" y="60.9375" class="s5">Карапетовна</text>
+											<text id="ts152" x="100.61328125" y="77.421875" class="s5">(1877</text>
+											<text id="ts153" x="113.83203125" y="93.90625" class="s5">-</text>
+											<text id="ts154" x="110.873046875" y="110.390625" class="s5">?)</text>
+											<text id="ts155" x="83.626953125" y="126.875" class="s6">Майраменц</text>
+										</g>
+										<polygon id="p145" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r156" class="s8" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g158">
+											<rect id="r159" class="s9" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g11" transform="translate(4.01171875,134.875)" at:id="179" class="s3" onclick="nodeclick(179)">
+									<g id="g131">
+										<rect id="r132" class="s10" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i135" xlink:href="Avakov.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t134" transform="translate(3,3)">
+											<text id="ts136" x="92.7138671875" y="11.484375" class="s5">Аваков</text>
+											<text id="ts137" x="92.458984375" y="27.96875" class="s5">Аракел</text>
+											<text id="ts138" x="96.6015625" y="44.453125" class="s5">(1874</text>
+											<text id="ts139" x="109.8203125" y="60.9375" class="s5">-</text>
+											<text id="ts140" x="106.861328125" y="77.421875" class="s5">?)</text>
+											<text id="ts141" x="87.84375" y="93.90625" class="s6">Аваковы</text>
+										</g>
+										<polygon id="p133" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r142" class="s8" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g13" transform="translate(0,1583.28125)">
+				<g id="g14" transform="translate(1515,0)">
+					<g id="g15">
+						<g id="g16">
+							<g id="g17">
+								<g id="g18" transform="translate(0,134.875)" at:id="84" class="s3" onclick="nodeclick(84)">
+									<g id="g160">
+										<rect id="r161" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i164" xlink:href="Avakov.html.files/io43.JPG" x="1" y="1" width="67.2268905639648" height="80" preserveAspectRatio="none"/>
+										<g id="t163" transform="translate(3,3)">
+											<text id="ts165" x="86.3273162841797" y="11.484375" class="s5">Аваков</text>
+											<text id="ts166" x="86.3771209716797" y="27.96875" class="s5">Еранос</text>
+											<text id="ts167" x="73.0294570922852" y="44.453125" class="s5">Аракелович</text>
+											<text id="ts168" x="90.2150115966797" y="60.9375" class="s5">(1907</text>
+											<text id="ts169" x="103.43376159668" y="77.421875" class="s5">-</text>
+											<text id="ts170" x="90.2150115966797" y="93.90625" class="s5">1945)</text>
+											<text id="ts171" x="81.4571990966797" y="110.390625" class="s6">Аваковы</text>
+										</g>
+										<polygon id="p162" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r172" class="s8" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+								<g id="g19" at:id="85" class="s3" onclick="nodeclick(85)">
+									<g id="g173" clip-path="url(#g188)">
+										<rect id="r174" class="s4" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										<image id="i177" xlink:href="Avakov.html.files/io103.jpg" x="1" y="1" width="62.2568092346191" height="80" preserveAspectRatio="none"/>
+										<g id="t176" transform="translate(3,3)">
+											<text id="ts178" x="80.6928558349609" y="11.484375" class="s5">Авакова</text>
+											<text id="ts179" x="65.4848480224609" y="27.96875" class="s5">(Агаджанова)</text>
+											<text id="ts180" x="81.0414886474609" y="44.453125" class="s5">Евгения</text>
+											<text id="ts181" x="73.6674652099609" y="60.9375" class="s5">Оскановна</text>
+											<text id="ts182" x="70.9955902099609" y="77.421875" class="s5">(18.02.1918</text>
+											<text id="ts183" x="100.948715209961" y="93.90625" class="s5">-</text>
+											<text id="ts184" x="70.9955902099609" y="110.390625" class="s5">06.10.1995)</text>
+											<text id="ts185" x="68.3588714599609" y="126.875" class="s6">Агаджановы</text>
+										</g>
+										<polygon id="p175" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r186" class="s8" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g188">
+											<rect id="r189" class="s9" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g20" transform="translate(0,1096.046875)">
+				<g id="g21" transform="translate(810,0)">
+					<g id="g22">
+						<g id="g23">
+							<g id="g24">
+								<g id="g25" transform="translate(0,118.390617370605)" at:id="83" class="s3" onclick="nodeclick(83)">
+									<g id="g190" clip-path="url(#g207)">
+										<rect id="r191" class="s4" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+										<image id="i194" xlink:href="Avakov.html.files/io42.JPG" x="1" y="1" width="64.7773284912109" height="80" preserveAspectRatio="none"/>
+										<g id="t193" transform="translate(3,3)">
+											<text id="ts195" x="78.6689376831055" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts196" x="77.3593673706055" y="27.96875" class="s5">(Авакова)</text>
+											<text id="ts197" x="91.1288986206055" y="44.453125" class="s5">Седа</text>
+											<text id="ts198" x="72.2206954956055" y="60.9375" class="s5">Ераносовна</text>
+											<text id="ts199" x="72.2558517456055" y="77.421875" class="s5">(01.05.1937</text>
+											<text id="ts200" x="94.2958908081055" y="93.90625" class="s5">или</text>
+											<text id="ts201" x="74.5527267456055" y="110.390625" class="s5">12.06.1936</text>
+											<text id="ts202" x="102.208976745605" y="126.875" class="s5">-</text>
+											<text id="ts203" x="72.2558517456055" y="143.359375" class="s5">16.05.2021)</text>
+											<text id="ts204" x="80.2324142456055" y="159.84375" class="s6">Аваковы</text>
+										</g>
+										<polygon id="p192" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r205" class="s8" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g207">
+											<rect id="r208" class="s9" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g26" at:id="82" class="s3" onclick="nodeclick(82)">
+									<g id="g209">
+										<rect id="r210" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i213" xlink:href="Avakov.html.files/io41.JPG" x="1" y="1" width="57.9710159301758" height="80" preserveAspectRatio="none"/>
+										<g id="t212" transform="translate(3,3)">
+											<text id="ts214" x="75.2657775878906" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts215" x="81.2276916503906" y="27.96875" class="s5">Матеос</text>
+											<text id="ts216" x="62.9464492797852" y="44.453125" class="s5">Меружанович</text>
+											<text id="ts217" x="68.8526916503906" y="60.9375" class="s5">(01.08.1928</text>
+											<text id="ts218" x="98.8058166503906" y="77.421875" class="s5">-</text>
+											<text id="ts219" x="68.8526916503906" y="93.90625" class="s5">05.07.1968)</text>
+											<text id="ts220" x="70.3956604003906" y="110.390625" class="s6">Азнауряны</text>
+										</g>
+										<polygon id="p211" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r221" class="s8" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g27" transform="translate(980,86.84375)">
+						<g id="g28">
+							<g id="g29">
+								<g id="g30" transform="translate(0,81)" at:id="88" class="s3" onclick="nodeclick(88)">
+									<g id="g222">
+										<rect id="r223" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i226" xlink:href="Avakov.html.files/io47.JPG" x="1" y="1" width="67.2268905639648" height="80" preserveAspectRatio="none"/>
+										<g id="t225" transform="translate(3,3)">
+											<text id="ts227" x="86.3273162841797" y="11.484375" class="s5">Аваков</text>
+											<text id="ts228" x="85.8644256591797" y="27.96875" class="s5">Эдуард</text>
+											<text id="ts229" x="73.3341445922852" y="44.453125" class="s5">Ераносович</text>
+											<text id="ts230" x="73.4806289672852" y="60.9375" class="s5">(28.02.1939</text>
+											<text id="ts231" x="103.43376159668" y="77.421875" class="s5">-</text>
+											<text id="ts232" x="73.4806289672852" y="93.90625" class="s5">20.04.2024)</text>
+											<text id="ts233" x="81.4571990966797" y="110.390625" class="s6">Аваковы</text>
+										</g>
+										<polygon id="p224" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r234" class="s8" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+								<g id="g31" at:id="89" class="s3" onclick="nodeclick(89)">
+									<g id="g235" clip-path="url(#g245)">
+										<rect id="r236" class="s4" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i238" xlink:href="Avakov.html.files/io48.JPG" x="1" y="1" width="71.1111145019531" height="80" preserveAspectRatio="none"/>
+										<g id="t237" transform="translate(3,3)">
+											<text id="ts239" x="85.1200103759766" y="11.484375" class="s5">Авакова</text>
+											<text id="ts240" x="87.7245025634766" y="27.96875" class="s5">Лариса</text>
+											<text id="ts241" x="81.9735260009766" y="44.453125" class="s5">Габоевна</text>
+											<text id="ts242" x="73.1258697509766" y="60.9375" class="s5">(10.02.1948)</text>
+										</g>
+									</g>
+									<rect id="r243" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g245">
+											<rect id="r246" class="s9" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g32" transform="translate(1230,200.8125)">
+						<g id="g33">
+							<g id="g36" transform="translate(0,4.421875)">
+								<g id="g37" at:id="248" class="s3" onclick="nodeclick(248)">
+									<g id="g247">
+										<rect id="r248" class="s11" x="0.5" y="0.5" width="149" height="81"/>
+										<image id="i250" xlink:href="Avakov.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t249" transform="translate(3,3)">
+											<text id="ts251" x="106.55078125" y="11.484375" class="s5">...</text>
+											<text id="ts252" x="87.94140625" y="27.96875" class="s6">Власовы</text>
+										</g>
+									</g>
+									<rect id="r253" class="s8" x="0.5" y="0.5" width="149" height="81"/>
+								</g>
+							</g>
+							<g id="g34" transform="translate(180,0)">
+								<g id="g35" at:id="86" class="s3" onclick="nodeclick(86)">
+									<g id="g254" clip-path="url(#g265)">
+										<rect id="r255" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i257" xlink:href="Avakov.html.files/io45.jpg" x="1" y="1" width="65.3061218261719" height="80" preserveAspectRatio="none"/>
+										<g id="t256" transform="translate(3,3)">
+											<text id="ts258" x="82.2175140380859" y="11.484375" class="s5">Авакова</text>
+											<text id="ts259" x="87.3093109130859" y="27.96875" class="s5">Лидия</text>
+											<text id="ts260" x="72.4850921630859" y="44.453125" class="s5">Ераносовна</text>
+											<text id="ts261" x="70.2233734130859" y="60.9375" class="s5">(18.09.1941)</text>
+											<text id="ts262" x="80.4968109130859" y="77.421875" class="s6">Аваковы</text>
+										</g>
+									</g>
+									<rect id="r263" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g265">
+											<rect id="r266" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g38" transform="translate(0,674.75)">
+				<g id="g39" transform="translate(170,0)">
+					<g id="g40" transform="translate(0,49.453125)">
+						<g id="g41">
+							<g id="g42">
+								<g id="g43" transform="translate(0,85.421875)" at:id="118" class="s3" onclick="nodeclick(118)">
+									<g id="g267" clip-path="url(#g278)">
+										<rect id="r268" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i270" xlink:href="Avakov.html.files/io65.jpg" x="1" y="1" width="65.3807144165039" height="80" preserveAspectRatio="none"/>
+										<g id="t269" transform="translate(3,3)">
+											<text id="ts271" x="78.9706268310547" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts272" x="90.1210174560547" y="27.96875" class="s5">Софа</text>
+											<text id="ts273" x="72.0009078979492" y="44.453125" class="s5">Матеосовна</text>
+											<text id="ts274" x="70.2606735229492" y="60.9375" class="s5">(03.07.1959)</text>
+											<text id="ts275" x="74.1005096435547" y="77.421875" class="s6">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r276" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g278">
+											<rect id="r279" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g44" at:id="119" class="s3" onclick="nodeclick(119)">
+									<g id="g280">
+										<rect id="r281" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i283" xlink:href="Avakov.html.files/io66.jpg" x="1" y="1" width="66.1156997680664" height="80" preserveAspectRatio="none"/>
+										<g id="t282" transform="translate(3,3)">
+											<text id="ts284" x="79.0422210693359" y="11.484375" class="s5">Степанян</text>
+											<text id="ts285" x="89.9601898193359" y="27.96875" class="s5">Гагик</text>
+											<text id="ts286" x="75.3303070068359" y="44.453125" class="s5">Смбатович</text>
+											<text id="ts287" x="70.6281661987305" y="60.9375" class="s5">(27.05.1950)</text>
+											<text id="ts288" x="74.1730804443359" y="77.421875" class="s6">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r289" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g45" transform="translate(770,0)">
+						<g id="g46">
+							<g id="g47">
+								<g id="g48" transform="translate(0,118.390617370605)" at:id="130" class="s3" onclick="nodeclick(130)">
+									<g id="g290" clip-path="url(#g302)">
+										<rect id="r291" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i293" xlink:href="Avakov.html.files/io76.jpg" x="1" y="1" width="58.1818199157715" height="80" preserveAspectRatio="none"/>
+										<g id="t292" transform="translate(3,3)">
+											<text id="ts294" x="75.0723571777344" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts295" x="70.7774353027344" y="27.96875" class="s5">(Азнаурян)</text>
+											<text id="ts296" x="81.1016540527344" y="44.453125" class="s5">Карина</text>
+											<text id="ts297" x="68.4248962402344" y="60.9375" class="s5">Матеозовна</text>
+											<text id="ts298" x="66.6612243652344" y="77.421875" class="s5">(04.10.1961)</text>
+											<text id="ts299" x="70.5010681152344" y="93.90625" class="s6">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r300" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g302">
+											<rect id="r303" class="s9" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g49" at:id="131" class="s3" onclick="nodeclick(131)">
+									<g id="g304">
+										<rect id="r305" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i307" xlink:href="Avakov.html.files/io77.jpg" x="1" y="1" width="54.7945213317871" height="80" preserveAspectRatio="none"/>
+										<g id="t306" transform="translate(3,3)">
+											<text id="ts308" x="73.3787078857422" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts309" x="81.0222625732422" y="27.96875" class="s5">Гурген</text>
+											<text id="ts310" x="65.7058563232422" y="44.453125" class="s5">Мартинович</text>
+											<text id="ts311" x="67.2644500732422" y="60.9375" class="s5">(26.04.1958</text>
+											<text id="ts312" x="89.3044891357422" y="77.421875" class="s5">или</text>
+											<text id="ts313" x="67.2644500732422" y="93.90625" class="s5">01.05.1958)</text>
+											<text id="ts314" x="68.5105438232422" y="110.390625" class="s6">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r315" class="s8" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g50" transform="translate(1280,32.96875)">
+						<g id="g51">
+							<g id="g52">
+								<g id="g53" transform="translate(0,101.90625)" at:id="147" class="s3" onclick="nodeclick(147)">
+									<g id="g316">
+										<rect id="r317" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i319" xlink:href="Avakov.html.files/io94.jpg" x="1" y="1" width="63.4920654296875" height="80" preserveAspectRatio="none"/>
+										<g id="t318" transform="translate(3,3)">
+											<text id="ts320" x="78.0263061523438" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts321" x="78.7499389648438" y="27.96875" class="s5">Меружан</text>
+											<text id="ts322" x="70.9686889648438" y="44.453125" class="s5">Матеозович</text>
+											<text id="ts323" x="69.3163452148438" y="60.9375" class="s5">(07.11.1967)</text>
+											<text id="ts324" x="73.1561889648438" y="77.421875" class="s6">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r325" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g54" at:id="148" class="s3" onclick="nodeclick(148)">
+									<g id="g326" clip-path="url(#g338)">
+										<rect id="r327" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i329" xlink:href="Avakov.html.files/io95.jpg" x="1" y="1" width="53.691276550293" height="80" preserveAspectRatio="none"/>
+										<g id="t328" transform="translate(3,3)">
+											<text id="ts330" x="73.1259155273438" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts331" x="56.1952438354492" y="27.96875" class="s5">(Тер-Петросян)</text>
+											<text id="ts332" x="82.5155639648438" y="44.453125" class="s5">Луиза</text>
+											<text id="ts333" x="65.6932983398438" y="60.9375" class="s5">Самвеловна</text>
+											<text id="ts334" x="64.4159545898438" y="77.421875" class="s5">(04.12.1973)</text>
+											<text id="ts335" x="55.9198532104492" y="93.90625" class="s6">Тер-Петросяны</text>
+										</g>
+									</g>
+									<rect id="r336" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g338">
+											<rect id="r339" class="s9" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g116" transform="translate(1700,32.96875)">
+					<g id="g117">
+						<g id="g118">
+							<g id="g119">
+								<g id="g120" transform="translate(0,85.421875)" at:id="90" class="s3" onclick="nodeclick(90)">
+									<g id="g340" clip-path="url(#g352)">
+										<rect id="r341" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i343" xlink:href="Avakov.html.files/io49.JPG" x="1" y="1" width="67.5105514526367" height="80" preserveAspectRatio="none"/>
+										<g id="t342" transform="translate(3,3)">
+											<text id="ts344" x="82.5902404785156" y="11.484375" class="s5">Барнови</text>
+											<text id="ts345" x="78.7259826660156" y="27.96875" class="s5">(Авакова)</text>
+											<text id="ts346" x="92.3138732910156" y="44.453125" class="s5">Эрна</text>
+											<text id="ts347" x="73.0746078491211" y="60.9375" class="s5">Эдуардовна</text>
+											<text id="ts348" x="71.3255844116211" y="77.421875" class="s5">(20.12.1969)</text>
+											<text id="ts349" x="81.5990295410156" y="93.90625" class="s6">Аваковы</text>
+										</g>
+									</g>
+									<rect id="r350" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g352">
+											<rect id="r353" class="s9" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g121" at:id="117" class="s3" onclick="nodeclick(117)">
+									<g id="g354">
+										<rect id="r355" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i357" xlink:href="Avakov.html.files/io481.jpeg" x="1" y="1" width="58.3941612243652" height="80" preserveAspectRatio="none"/>
+										<g id="t356" transform="translate(3,3)">
+											<text id="ts358" x="78.0320434570313" y="11.484375" class="s5">Барнови</text>
+											<text id="ts359" x="81.1433715820313" y="27.96875" class="s5">Сандро</text>
+											<text id="ts360" x="71.8240356445313" y="44.453125" class="s5">Гурамович</text>
+											<text id="ts361" x="66.7673950195313" y="60.9375" class="s5">(14.11.1968)</text>
+											<text id="ts362" x="77.3201293945313" y="77.421875" class="s6">Барнови</text>
+										</g>
+									</g>
+									<rect id="r363" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g122" transform="translate(180,101.90625)">
+						<g id="g123">
+							<g id="g124">
+								<g id="g125" at:id="91" class="s3" onclick="nodeclick(91)">
+									<g id="g364">
+										<rect id="r365" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i367" xlink:href="Avakov.html.files/io50.JPG" x="1" y="1" width="60.6060600280762" height="80" preserveAspectRatio="none"/>
+										<g id="t366" transform="translate(3,3)">
+											<text id="ts368" x="83.0168914794922" y="11.484375" class="s5">Аваков</text>
+											<text id="ts369" x="83.2834930419922" y="27.96875" class="s5">Эрнест</text>
+											<text id="ts370" x="69.5110321044922" y="44.453125" class="s5">Эдуардович</text>
+											<text id="ts371" x="67.8733367919922" y="60.9375" class="s5">(24.01.1972)</text>
+											<text id="ts372" x="78.1467742919922" y="77.421875" class="s6">Аваковы</text>
+										</g>
+									</g>
+									<rect id="r373" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g126" transform="translate(2130,134.875)">
+					<g id="g127">
+						<g id="g128">
+							<g id="g129">
+								<g id="g130" at:id="87" class="s3" onclick="nodeclick(87)">
+									<g id="g374">
+										<rect id="r375" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i377" xlink:href="Avakov.html.files/io46.JPG" x="1" y="1" width="57.1428565979004" height="80" preserveAspectRatio="none"/>
+										<g id="t376" transform="translate(3,3)">
+											<text id="ts378" x="81.3819732666016" y="11.484375" class="s5">Власов</text>
+											<text id="ts379" x="81.1007232666016" y="27.96875" class="s5">Степан</text>
+											<text id="ts380" x="66.9386138916016" y="44.453125" class="s5">Леонидович</text>
+											<text id="ts381" x="66.1417388916016" y="60.9375" class="s5">(15.09.1972)</text>
+											<text id="ts382" x="76.5128326416016" y="77.421875" class="s6">Власовы</text>
+										</g>
+									</g>
+									<rect id="r383" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g55" transform="translate(0,286.421875)">
+				<g id="g56" transform="translate(0,16.484375)">
+					<g id="g57">
+						<g id="g58">
+							<g id="g59">
+								<g id="g60" transform="translate(0,85.421875)" at:id="121" class="s3" onclick="nodeclick(121)">
+									<g id="g384">
+										<rect id="r385" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i387" xlink:href="Avakov.html.files/io68.jpg" x="1" y="1" width="55.1724128723145" height="80" preserveAspectRatio="none"/>
+										<g id="t386" transform="translate(3,3)">
+											<text id="ts388" x="73.5705871582031" y="11.484375" class="s5">Степанян</text>
+											<text id="ts389" x="82.9016418457031" y="27.96875" class="s5">Смбат</text>
+											<text id="ts390" x="71.4905090332031" y="44.453125" class="s5">Гагикович</text>
+											<text id="ts391" x="65.1565246582031" y="60.9375" class="s5">(27.10.1987)</text>
+											<text id="ts392" x="68.7014465332031" y="77.421875" class="s6">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r393" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g61" at:id="122" class="s3" onclick="nodeclick(122)">
+									<g id="g394" clip-path="url(#g405)">
+										<rect id="r395" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i397" xlink:href="Avakov.html.files/io473.jpg" x="1" y="1" width="63.7450256347656" height="80" preserveAspectRatio="none"/>
+										<g id="t396" transform="translate(3,3)">
+											<text id="ts398" x="76.6762237548828" y="11.484375" class="s5">Арутюнян</text>
+											<text id="ts399" x="84.1322784423828" y="27.96875" class="s5">Лусине</text>
+											<text id="ts400" x="74.9213409423828" y="44.453125" class="s5">Артуровна</text>
+											<text id="ts401" x="69.4428253173828" y="60.9375" class="s5">(28.11.1990)</text>
+											<text id="ts402" x="71.8061065673828" y="77.421875" class="s6">Арутюняны</text>
+										</g>
+									</g>
+									<rect id="r403" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g405">
+											<rect id="r406" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g62" transform="translate(337.5703125,0)">
+						<g id="g63">
+							<g id="g64">
+								<g id="g65" transform="translate(2.4296875,85.421875)" at:id="120" class="s3" onclick="nodeclick(120)">
+									<g id="g407">
+										<rect id="r408" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i410" xlink:href="Avakov.html.files/io67.jpg" x="1" y="1" width="51.7799339294434" height="80" preserveAspectRatio="none"/>
+										<g id="t409" transform="translate(3,3)">
+											<text id="ts411" x="71.8743438720703" y="11.484375" class="s5">Степанян</text>
+											<text id="ts412" x="78.6712188720703" y="27.96875" class="s5">Тигран</text>
+											<text id="ts413" x="69.7942657470703" y="44.453125" class="s5">Гагикович</text>
+											<text id="ts414" x="63.460277557373" y="60.9375" class="s5">(23.11.1988)</text>
+											<text id="ts415" x="67.0052032470703" y="77.421875" class="s6">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r416" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g66" at:id="124" class="s3" onclick="nodeclick(124)">
+									<g id="g417" clip-path="url(#g428)">
+										<rect id="r418" class="s4" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										<image id="i420" xlink:href="Avakov.html.files/io71.jpg" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t419" transform="translate(3,3)">
+											<text id="ts421" x="92.0849609375" y="11.484375" class="s5">Закарян</text>
+											<text id="ts422" x="97.3056640625" y="27.96875" class="s5">Лиана</text>
+											<text id="ts423" x="87.171875" y="44.453125" class="s5">Ашотовна</text>
+											<text id="ts424" x="80" y="60.9375" class="s5">(25.01.1990)</text>
+											<text id="ts425" x="87.21484375" y="77.421875" class="s6">Закаряны</text>
+										</g>
+									</g>
+									<rect id="r426" class="s8" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g428">
+											<rect id="r429" class="s9" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g82" transform="translate(770,0)">
+					<g id="g83" transform="translate(0,16.484375)">
+						<g id="g84">
+							<g id="g85">
+								<g id="g86" transform="translate(0,85.421875)" at:id="143" class="s3" onclick="nodeclick(143)">
+									<g id="g430" clip-path="url(#g441)">
+										<rect id="r431" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i433" xlink:href="Avakov.html.files/io89.jpg" x="1" y="1" width="55.1724128723145" height="80" preserveAspectRatio="none"/>
+										<g id="t432" transform="translate(3,3)">
+											<text id="ts434" x="73.5676574707031" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts435" x="86.3264465332031" y="27.96875" class="s5">Седа</text>
+											<text id="ts436" x="68.2795715332031" y="44.453125" class="s5">Гургеновна</text>
+											<text id="ts437" x="65.1565246582031" y="60.9375" class="s5">(02.09.1983)</text>
+											<text id="ts438" x="68.6994934082031" y="77.421875" class="s6">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r439" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g441">
+											<rect id="r442" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g87" at:id="144" class="s3" onclick="nodeclick(144)">
+									<g id="g443">
+										<rect id="r444" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i446" xlink:href="Avakov.html.files/io90.jpg" x="1" y="1" width="59.0405921936035" height="80" preserveAspectRatio="none"/>
+										<g id="t445" transform="translate(3,3)">
+											<text id="ts447" x="75.8181457519531" y="11.484375" class="s5">Хачатрян</text>
+											<text id="ts448" x="91.9021301269531" y="27.96875" class="s5">Гор</text>
+											<text id="ts449" x="74.1511535644531" y="44.453125" class="s5">Ашотович</text>
+											<text id="ts450" x="67.0906066894531" y="60.9375" class="s5">(03.05.1983)</text>
+											<text id="ts451" x="70.9499816894531" y="77.421875" class="s6">Хачатряны</text>
+										</g>
+									</g>
+									<rect id="r452" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g88" transform="translate(340,0)">
+						<g id="g89">
+							<g id="g90">
+								<g id="g91" transform="translate(0,101.90625)" at:id="132" class="s3" onclick="nodeclick(132)">
+									<g id="g453">
+										<rect id="r454" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i456" xlink:href="Avakov.html.files/io78.jpg" x="1" y="1" width="58.2758636474609" height="80" preserveAspectRatio="none"/>
+										<g id="t455" transform="translate(3,3)">
+											<text id="ts457" x="75.1193771362305" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts458" x="80.8351974487305" y="27.96875" class="s5">Мартик</text>
+											<text id="ts459" x="69.7199630737305" y="44.453125" class="s5">Гургенович</text>
+											<text id="ts460" x="66.7082443237305" y="60.9375" class="s5">(23.12.1989)</text>
+											<text id="ts461" x="70.2512130737305" y="77.421875" class="s6">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r462" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g92" at:id="133" class="s3" onclick="nodeclick(133)">
+									<g id="g463" clip-path="url(#g475)">
+										<rect id="r464" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i466" xlink:href="Avakov.html.files/io79.jpg" x="1" y="1" width="60" height="80" preserveAspectRatio="none"/>
+										<g id="t465" transform="translate(3,3)">
+											<text id="ts467" x="75.9814453125" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts468" x="74.66015625" y="27.96875" class="s5">(Давтьян)</text>
+											<text id="ts469" x="77.4111328125" y="44.453125" class="s5">Надежда</text>
+											<text id="ts470" x="70.5205078125" y="60.9375" class="s5">Георгиевна</text>
+											<text id="ts471" x="67.5703125" y="77.421875" class="s5">(05.11.1989)</text>
+											<text id="ts472" x="74.384765625" y="93.90625" class="s6">Давтьяны</text>
+										</g>
+									</g>
+									<rect id="r473" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g475">
+											<rect id="r476" class="s9" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g107" transform="translate(1360,101.90625)">
+					<g id="g108">
+						<g id="g109">
+							<g id="g110">
+								<g id="g111" at:id="150" class="s3" onclick="nodeclick(150)">
+									<g id="g477">
+										<rect id="r478" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i480" xlink:href="Avakov.html.files/io97.jpg" x="1" y="1" width="61.538459777832" height="80" preserveAspectRatio="none"/>
+										<g id="t479" transform="translate(3,3)">
+											<text id="ts481" x="77.0494995117188" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts482" x="83.0114135742188" y="27.96875" class="s5">Матеос</text>
+											<text id="ts483" x="64.7301712036133" y="44.453125" class="s5">Меружанович</text>
+											<text id="ts484" x="68.3395462036133" y="60.9375" class="s5">(11.06.1998)</text>
+											<text id="ts485" x="72.1793823242188" y="77.421875" class="s6">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r486" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g112" transform="translate(180,0)">
+						<g id="g113">
+							<g id="g114">
+								<g id="g115" at:id="149" class="s3" onclick="nodeclick(149)">
+									<g id="g487" clip-path="url(#g498)">
+										<rect id="r488" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i490" xlink:href="Avakov.html.files/io96.jpg" x="1" y="1" width="60.1503753662109" height="80" preserveAspectRatio="none"/>
+										<g id="t489" transform="translate(3,3)">
+											<text id="ts491" x="76.3554611206055" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts492" x="79.9882736206055" y="27.96875" class="s5">Евгения</text>
+											<text id="ts493" x="64.1474533081055" y="44.453125" class="s5">Меружановна</text>
+											<text id="ts494" x="67.6455001831055" y="60.9375" class="s5">(04.04.2000)</text>
+											<text id="ts495" x="71.4853439331055" y="77.421875" class="s6">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r496" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g498">
+											<rect id="r499" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g67">
+				<g id="g68">
+					<g id="g69">
+						<g id="g70">
+							<g id="g71">
+								<g id="g72" at:id="123" class="s3" onclick="nodeclick(123)">
+									<g id="g500">
+										<rect id="r501" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i503" xlink:href="Avakov.html.files/io70.jpeg" x="1" y="1" width="60.8365020751953" height="80" preserveAspectRatio="none"/>
+										<g id="t502" transform="translate(3,3)">
+											<text id="ts504" x="76.4026260375977" y="11.484375" class="s5">Степанян</text>
+											<text id="ts505" x="89.7151260375977" y="27.96875" class="s5">Авет</text>
+											<text id="ts506" x="72.6907119750977" y="44.453125" class="s5">Смбатович</text>
+											<text id="ts507" x="67.9885635375977" y="60.9375" class="s5">(10.06.2023)</text>
+											<text id="ts508" x="71.5334854125977" y="77.421875" class="s6">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r509" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g73" transform="translate(250,0)">
+					<g id="g74">
+						<g id="g75">
+							<g id="g76">
+								<g id="g77" at:id="125" class="s3" onclick="nodeclick(125)">
+									<g id="g510" clip-path="url(#g521)">
+										<rect id="r511" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i513" xlink:href="Avakov.html.files/io72.jpeg" x="1" y="1" width="51.4685325622559" height="80" preserveAspectRatio="none"/>
+										<g id="t512" transform="translate(3,3)">
+											<text id="ts514" x="71.7186431884766" y="11.484375" class="s5">Степанян</text>
+											<text id="ts515" x="79.7664947509766" y="27.96875" class="s5">София</text>
+											<text id="ts516" x="65.5838775634766" y="44.453125" class="s5">Тиграновна</text>
+											<text id="ts517" x="63.3045768737793" y="60.9375" class="s5">(17.09.2015)</text>
+											<text id="ts518" x="66.8495025634766" y="77.421875" class="s6">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r519" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g521">
+											<rect id="r522" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g78" transform="translate(180,0)">
+						<g id="g79">
+							<g id="g80">
+								<g id="g81" at:id="126" class="s3" onclick="nodeclick(126)">
+									<g id="g523" clip-path="url(#g534)">
+										<rect id="r524" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i526" xlink:href="Avakov.html.files/io73.jpeg" x="1" y="1" width="52.3809509277344" height="80" preserveAspectRatio="none"/>
+										<g id="t525" transform="translate(3,3)">
+											<text id="ts527" x="72.1748504638672" y="11.484375" class="s5">Степанян</text>
+											<text id="ts528" x="84.6875457763672" y="27.96875" class="s5">Анна</text>
+											<text id="ts529" x="66.0400848388672" y="44.453125" class="s5">Тиграновна</text>
+											<text id="ts530" x="63.7607879638672" y="60.9375" class="s5">(16.02.2018)</text>
+											<text id="ts531" x="67.3057098388672" y="77.421875" class="s6">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r532" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g534">
+											<rect id="r535" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g93" transform="translate(680,0)">
+					<g id="g94">
+						<g id="g95">
+							<g id="g96">
+								<g id="g97" at:id="145" class="s3" onclick="nodeclick(145)">
+									<g id="g536">
+										<rect id="r537" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i539" xlink:href="Avakov.html.files/io91.jpg" x="1" y="1" width="59.0405921936035" height="80" preserveAspectRatio="none"/>
+										<g id="t538" transform="translate(3,3)">
+											<text id="ts540" x="75.8181457519531" y="11.484375" class="s5">Хачатрян</text>
+											<text id="ts541" x="83.0779113769531" y="27.96875" class="s5">Баграт</text>
+											<text id="ts542" x="78.8591613769531" y="44.453125" class="s5">Горович</text>
+											<text id="ts543" x="67.0906066894531" y="60.9375" class="s5">(25.11.2017)</text>
+											<text id="ts544" x="70.9499816894531" y="77.421875" class="s6">Хачатряны</text>
+										</g>
+									</g>
+									<rect id="r545" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g98" transform="translate(180,0)">
+						<g id="g99">
+							<g id="g100">
+								<g id="g101" at:id="146" class="s3" onclick="nodeclick(146)">
+									<g id="g546" clip-path="url(#g557)">
+										<rect id="r547" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i549" xlink:href="Avakov.html.files/io92.jpg" x="1" y="1" width="53.1561470031738" height="80" preserveAspectRatio="none"/>
+										<g id="t548" transform="translate(3,3)">
+											<text id="ts550" x="72.8759307861328" y="11.484375" class="s5">Хачатрян</text>
+											<text id="ts551" x="85.0751495361328" y="27.96875" class="s5">Анна</text>
+											<text id="ts552" x="76.0282745361328" y="44.453125" class="s5">Горовна</text>
+											<text id="ts553" x="64.1483917236328" y="60.9375" class="s5">(10.11.2020)</text>
+											<text id="ts554" x="68.0077667236328" y="77.421875" class="s6">Хачатряны</text>
+										</g>
+									</g>
+									<rect id="r555" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g557">
+											<rect id="r558" class="s9" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g102" transform="translate(1110,0)">
+					<g id="g103">
+						<g id="g104">
+							<g id="g105">
+								<g id="g106" at:id="134" class="s3" onclick="nodeclick(134)">
+									<g id="g559">
+										<rect id="r560" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i562" xlink:href="Avakov.html.files/io80.jpg" x="1" y="1" width="57.553955078125" height="80" preserveAspectRatio="none"/>
+										<g id="t561" transform="translate(3,3)">
+											<text id="ts563" x="74.7584228515625" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts564" x="83.6500244140625" y="27.96875" class="s5">Давид</text>
+											<text id="ts565" x="67.4752197265625" y="44.453125" class="s5">Мартикович</text>
+											<text id="ts566" x="66.3472900390625" y="60.9375" class="s5">(19.07.2015)</text>
+											<text id="ts567" x="69.8902587890625" y="77.421875" class="s6">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r568" class="s8" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>

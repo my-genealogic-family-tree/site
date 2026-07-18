@@ -1,0 +1,416 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="Ter-Petrosyan.html.files/p' + i + '.html?s=40e6351fb426ba18" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="2906.8134765625" height="1771.21838378906" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:none;stroke:none; }
+				.s1 { stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s2 { cursor:pointer; }
+				.s3 { fill:#FBD27A;stroke:none; }
+				.s4 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s5 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s6 { fill:none;stroke:#606060;stroke-width:1; }
+				.s7 { fill:#FFFFFF;stroke:none; }
+				.s8 { fill:#FF9368;stroke:none; }
+				.s9 { font-size:12px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s10 { fill:#92DDF9;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1">
+		<image id="i236" xlink:href="Ter-Petrosyan.html.files/i236.jpg" x="0" y="0" width="2906.8134765625" height="1771.21838378906" preserveAspectRatio="none"/>
+	</g>
+	<g id="g2" transform="translate(1122,1)">
+		<rect id="r235" class="s0" x="0" y="0" width="616" height="1770"/>
+	</g>
+	<g id="g3" transform="translate(1134,13)">
+		<g id="g4">
+			<line id="l219" class="s1" x1="335.5" y1="1383.28125" x2="335.5" y2="1483.5"/>
+			<line id="l220" class="s1" x1="426.5" y1="1483.5" x2="426.5" y2="1583.28125"/>
+			<line id="l221" class="s1" x1="517.5" y1="1383.28125" x2="517.5" y2="1483.5"/>
+			<line id="l222" class="s1" x1="335.5" y1="1483.5" x2="517.5" y2="1483.5"/>
+			<line id="l223" class="s1" x1="335.5" y1="896.046875" x2="335.5" y2="1096.046875"/>
+			<line id="l224" class="s1" x1="165.5" y1="474.75" x2="165.5" y2="574.5"/>
+			<line id="l225" class="s1" x1="335.5" y1="574.5" x2="335.5" y2="674.75"/>
+			<line id="l226" class="s1" x1="505.5" y1="474.75" x2="505.5" y2="574.5"/>
+			<line id="l227" class="s1" x1="165.5" y1="574.5" x2="505.5" y2="574.5"/>
+			<line id="l228" class="s1" x1="75.5" y1="86.421875" x2="75.5" y2="186.5"/>
+			<line id="l229" class="s1" x1="165.5" y1="186.5" x2="165.5" y2="286.421875"/>
+			<line id="l230" class="s1" x1="255.5" y1="86.421875" x2="255.5" y2="186.5"/>
+			<line id="l231" class="s1" x1="505.5" y1="86.421875" x2="505.5" y2="388.328125"/>
+			<line id="l232" class="s1" x1="75.5" y1="186.5" x2="255.5" y2="186.5"/>
+		</g>
+		<g id="g5">
+			<g id="g6" transform="translate(0,1583.28125)">
+				<g id="g7" transform="translate(349.042053222656,0)">
+					<g id="g8">
+						<g id="g9">
+							<g id="g10">
+								<g id="g12" transform="translate(2.05418395996094,0)" at:id="185" class="s2" onclick="nodeclick(185)">
+									<g id="g66" clip-path="url(#g75)">
+										<rect id="r67" class="s3" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i70" xlink:href="Ter-Petrosyan.html.files/io138.jpg" x="1" y="1" width="63.4920654296875" height="80" preserveAspectRatio="none"/>
+										<g id="t69" transform="translate(3,3)">
+											<text id="ts71" x="65.6893920898438" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts72" x="86.7333374023438" y="27.96875" class="s4">Нвард</text>
+										</g>
+										<polygon id="p68" class="s5" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r73" class="s6" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g75">
+											<rect id="r76" class="s7" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g11" transform="translate(0,81)" at:id="184" class="s2" onclick="nodeclick(184)">
+									<g id="g57">
+										<rect id="r58" class="s8" x="0.5" y="0.5" width="153.108367919922" height="81"/>
+										<image id="i61" xlink:href="Ter-Petrosyan.html.files/io137.jpg" x="1" y="1" width="62.2568092346191" height="80" preserveAspectRatio="none"/>
+										<g id="t60" transform="translate(3,3)">
+											<text id="ts62" x="67.1259460449219" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts63" x="83.3583679199219" y="27.96875" class="s4">Арестак</text>
+											<text id="ts64" x="62.2568092346191" y="44.453125" class="s9">Тер-Петросяны</text>
+										</g>
+										<polygon id="p59" class="s5" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r65" class="s6" x="0.5" y="0.5" width="153.108367919922" height="81"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g13" transform="translate(0,1096.046875)">
+				<g id="g14" transform="translate(257.832580566406,0)">
+					<g id="g15">
+						<g id="g16">
+							<g id="g17">
+								<g id="g18" transform="translate(0,167.84375)" at:id="152" class="s2" onclick="nodeclick(152)">
+									<g id="g77">
+										<rect id="r78" class="s10" x="0.5" y="0.5" width="153.3515625" height="118.390617370605"/>
+										<image id="i81" xlink:href="Ter-Petrosyan.html.files/io99.JPG" x="1" y="1" width="62.5" height="80" preserveAspectRatio="none"/>
+										<g id="t80" transform="translate(3,3)">
+											<text id="ts82" x="67.369140625" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts83" x="85.6767578125" y="27.96875" class="s4">Эдуард</text>
+											<text id="ts84" x="70.603515625" y="44.453125" class="s4">Арестакович</text>
+											<text id="ts85" x="73.29296875" y="60.9375" class="s4">(02.02.1930</text>
+											<text id="ts86" x="103.24609375" y="77.421875" class="s4">-</text>
+											<text id="ts87" x="73.29296875" y="93.90625" class="s4">24.07.1991)</text>
+											<text id="ts88" x="62.5" y="110.390625" class="s9">Тер-Петросяны</text>
+										</g>
+										<polygon id="p79" class="s5" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r89" class="s6" x="0.5" y="0.5" width="153.3515625" height="118.390617370605"/>
+								</g>
+								<g id="g19" transform="translate(2.17578125,0)" at:id="153" class="s2" onclick="nodeclick(153)">
+									<g id="g90" clip-path="url(#g107)">
+										<rect id="r91" class="s3" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+										<image id="i94" xlink:href="Ter-Petrosyan.html.files/io100.JPG" x="1" y="1" width="57.553955078125" height="80" preserveAspectRatio="none"/>
+										<g id="t93" transform="translate(3,3)">
+											<text id="ts95" x="62.7203369140625" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts96" x="69.9156494140625" y="27.96875" class="s4">(Мовсесян)</text>
+											<text id="ts97" x="87.0250244140625" y="44.453125" class="s4">Лена</text>
+											<text id="ts98" x="68.4918212890625" y="60.9375" class="s4">Петросовна</text>
+											<text id="ts99" x="68.6441650390625" y="77.421875" class="s4">(07.06.1931</text>
+											<text id="ts100" x="90.6842041015625" y="93.90625" class="s4">или</text>
+											<text id="ts101" x="70.9410400390625" y="110.390625" class="s4">10.06.1931</text>
+											<text id="ts102" x="98.5972900390625" y="126.875" class="s4">-</text>
+											<text id="ts103" x="68.6441650390625" y="143.359375" class="s4">30.04.2009)</text>
+											<text id="ts104" x="69.6402587890625" y="159.84375" class="s9">Мовсесяны</text>
+										</g>
+										<polygon id="p92" class="s5" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r105" class="s6" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g107">
+											<rect id="r108" class="s7" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g20" transform="translate(184.3515625,205.234375)">
+						<g id="g21">
+							<g id="g22">
+								<g id="g23" at:id="186" class="s2" onclick="nodeclick(186)">
+									<g id="g109">
+										<rect id="r110" class="s10" x="0.5" y="0.5" width="149" height="81"/>
+										<image id="i113" xlink:href="Ter-Petrosyan.html.files/io140.JPG" x="1" y="1" width="57.9710159301758" height="80" preserveAspectRatio="none"/>
+										<g id="t112" transform="translate(3,3)">
+											<text id="ts114" x="62.9288711547852" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts115" x="78.9571838378906" y="27.96875" class="s4">Георгий</text>
+											<text id="ts116" x="66.1632385253906" y="44.453125" class="s4">Арестакович</text>
+											<text id="ts117" x="58.0597305297852" y="60.9375" class="s9">Тер-Петросяны</text>
+										</g>
+										<polygon id="p111" class="s5" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r118" class="s6" x="0.5" y="0.5" width="149" height="81"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g24" transform="translate(0,674.75)">
+				<g id="g25" transform="translate(260.008361816406,0)">
+					<g id="g26">
+						<g id="g27">
+							<g id="g28">
+								<g id="g29" transform="translate(0,101.90625)" at:id="151" class="s2" onclick="nodeclick(151)">
+									<g id="g119">
+										<rect id="r120" class="s10" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i123" xlink:href="Ter-Petrosyan.html.files/io98.jpg" x="1" y="1" width="55.1724128723145" height="80" preserveAspectRatio="none"/>
+										<g id="t122" transform="translate(3,3)">
+											<text id="ts124" x="61.5295677185059" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts125" x="79.3655090332031" y="27.96875" class="s4">Самвел</text>
+											<text id="ts126" x="66.7942199707031" y="44.453125" class="s4">Эдуардович</text>
+											<text id="ts127" x="67.4533996582031" y="60.9375" class="s4">(28.11.1952</text>
+											<text id="ts128" x="97.4065246582031" y="77.421875" class="s4">-</text>
+											<text id="ts129" x="67.4533996582031" y="93.90625" class="s4">10.08.2020)</text>
+											<text id="ts130" x="56.6604270935059" y="110.390625" class="s9">Тер-Петросяны</text>
+										</g>
+										<polygon id="p121" class="s5" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r131" class="s6" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+								<g id="g30" at:id="156" class="s2" onclick="nodeclick(156)">
+									<g id="g132" clip-path="url(#g144)">
+										<rect id="r133" class="s3" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i135" xlink:href="Ter-Petrosyan.html.files/io104.jpg" x="1" y="1" width="57.553955078125" height="80" preserveAspectRatio="none"/>
+										<g id="t134" transform="translate(3,3)">
+											<text id="ts136" x="62.7203369140625" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts137" x="69.3970947265625" y="27.96875" class="s4">(Мхитарян)</text>
+											<text id="ts138" x="83.6646728515625" y="44.453125" class="s4">Санам</text>
+											<text id="ts139" x="71.0084228515625" y="60.9375" class="s4">Цолаковна</text>
+											<text id="ts140" x="66.3472900390625" y="77.421875" class="s4">(28.09.1952)</text>
+											<text id="ts141" x="69.1207275390625" y="93.90625" class="s9">Мхитаряны</text>
+										</g>
+									</g>
+									<rect id="r142" class="s6" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g144">
+											<rect id="r145" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g31" transform="translate(0,286.421875)">
+				<g id="g32" transform="translate(90,0)">
+					<g id="g33">
+						<g id="g34">
+							<g id="g35">
+								<g id="g36" transform="translate(0,85.421875)" at:id="148" class="s2" onclick="nodeclick(148)">
+									<g id="g146" clip-path="url(#g158)">
+										<rect id="r147" class="s3" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i149" xlink:href="Ter-Petrosyan.html.files/io95.jpg" x="1" y="1" width="53.691276550293" height="80" preserveAspectRatio="none"/>
+										<g id="t148" transform="translate(3,3)">
+											<text id="ts150" x="73.1259155273438" y="11.484375" class="s4">Азнаурян</text>
+											<text id="ts151" x="56.1952438354492" y="27.96875" class="s4">(Тер-Петросян)</text>
+											<text id="ts152" x="82.5155639648438" y="44.453125" class="s4">Луиза</text>
+											<text id="ts153" x="65.6932983398438" y="60.9375" class="s4">Самвеловна</text>
+											<text id="ts154" x="64.4159545898438" y="77.421875" class="s4">(04.12.1973)</text>
+											<text id="ts155" x="55.9198532104492" y="93.90625" class="s9">Тер-Петросяны</text>
+										</g>
+									</g>
+									<rect id="r156" class="s6" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g158">
+											<rect id="r159" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g37" at:id="147" class="s2" onclick="nodeclick(147)">
+									<g id="g160">
+										<rect id="r161" class="s10" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i163" xlink:href="Ter-Petrosyan.html.files/io94.jpg" x="1" y="1" width="63.4920654296875" height="80" preserveAspectRatio="none"/>
+										<g id="t162" transform="translate(3,3)">
+											<text id="ts164" x="78.0263061523438" y="11.484375" class="s4">Азнаурян</text>
+											<text id="ts165" x="78.7499389648438" y="27.96875" class="s4">Меружан</text>
+											<text id="ts166" x="70.9686889648438" y="44.453125" class="s4">Матеозович</text>
+											<text id="ts167" x="69.3163452148438" y="60.9375" class="s4">(07.11.1967)</text>
+											<text id="ts168" x="73.1561889648438" y="77.421875" class="s9">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r169" class="s6" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g38" transform="translate(340.016693115234,101.90625)">
+						<g id="g39">
+							<g id="g40">
+								<g id="g41" at:id="154" class="s2" onclick="nodeclick(154)">
+									<g id="g170" clip-path="url(#g181)">
+										<rect id="r171" class="s3" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i173" xlink:href="Ter-Petrosyan.html.files/io101.jpg" x="1" y="1" width="52.8052787780762" height="80" preserveAspectRatio="none"/>
+										<g id="t172" transform="translate(3,3)">
+											<text id="ts174" x="60.3459968566895" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts175" x="82.0198211669922" y="27.96875" class="s4">Елена</text>
+											<text id="ts176" x="65.2502899169922" y="44.453125" class="s4">Самвеловна</text>
+											<text id="ts177" x="63.9729499816895" y="60.9375" class="s4">(31.12.1987)</text>
+											<text id="ts178" x="55.4768562316895" y="77.421875" class="s9">Тер-Петросяны</text>
+										</g>
+									</g>
+									<rect id="r179" class="s6" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g181">
+											<rect id="r182" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g42">
+				<g id="g43">
+					<g id="g44">
+						<g id="g45">
+							<g id="g46">
+								<g id="g47" at:id="150" class="s2" onclick="nodeclick(150)">
+									<g id="g183">
+										<rect id="r184" class="s10" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i186" xlink:href="Ter-Petrosyan.html.files/io97.jpg" x="1" y="1" width="61.538459777832" height="80" preserveAspectRatio="none"/>
+										<g id="t185" transform="translate(3,3)">
+											<text id="ts187" x="77.0494995117188" y="11.484375" class="s4">Азнаурян</text>
+											<text id="ts188" x="83.0114135742188" y="27.96875" class="s4">Матеос</text>
+											<text id="ts189" x="64.7301712036133" y="44.453125" class="s4">Меружанович</text>
+											<text id="ts190" x="68.3395462036133" y="60.9375" class="s4">(11.06.1998)</text>
+											<text id="ts191" x="72.1793823242188" y="77.421875" class="s9">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r192" class="s6" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g48" transform="translate(180,0)">
+						<g id="g49">
+							<g id="g50">
+								<g id="g51" at:id="149" class="s2" onclick="nodeclick(149)">
+									<g id="g193" clip-path="url(#g204)">
+										<rect id="r194" class="s3" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i196" xlink:href="Ter-Petrosyan.html.files/io96.jpg" x="1" y="1" width="60.1503753662109" height="80" preserveAspectRatio="none"/>
+										<g id="t195" transform="translate(3,3)">
+											<text id="ts197" x="76.3554611206055" y="11.484375" class="s4">Азнаурян</text>
+											<text id="ts198" x="79.9882736206055" y="27.96875" class="s4">Евгения</text>
+											<text id="ts199" x="64.1474533081055" y="44.453125" class="s4">Меружановна</text>
+											<text id="ts200" x="67.6455001831055" y="60.9375" class="s4">(04.04.2000)</text>
+											<text id="ts201" x="71.4853439331055" y="77.421875" class="s9">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r202" class="s6" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g204">
+											<rect id="r205" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g52" transform="translate(430,0)">
+					<g id="g53">
+						<g id="g54">
+							<g id="g55">
+								<g id="g56" at:id="155" class="s2" onclick="nodeclick(155)">
+									<g id="g206" clip-path="url(#g217)">
+										<rect id="r207" class="s3" x="0.5" y="0.5" width="149.033386230469" height="85.421875" rx="10" ry="10"/>
+										<image id="i209" xlink:href="Ter-Petrosyan.html.files/io102.jpg" x="1" y="1" width="58.1818199157715" height="80" preserveAspectRatio="none"/>
+										<g id="t208" transform="translate(3,3)">
+											<text id="ts210" x="63.0509605407715" y="11.484375" class="s4">Тер-Петросян</text>
+											<text id="ts211" x="83.9484252929688" y="27.96875" class="s4">Диана</text>
+											<text id="ts212" x="69.0744018554688" y="44.453125" class="s4">Витальевна</text>
+											<text id="ts213" x="66.6779174804688" y="60.9375" class="s4">(22.01.2016)</text>
+											<text id="ts214" x="58.1818199157715" y="77.421875" class="s9">Тер-Петросяны</text>
+										</g>
+									</g>
+									<rect id="r215" class="s6" x="0.5" y="0.5" width="149.033386230469" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g217">
+											<rect id="r218" class="s7" x="0.5" y="0.5" width="149.033386230469" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>

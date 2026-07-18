@@ -1,0 +1,317 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="Andriyasov.html.files/p' + i + '.html?s=40e6351f79544709" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="1424.50769042969" height="868" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:none;stroke:none; }
+				.s1 { stroke-dasharray:3,6;stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s2 { stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s3 { cursor:pointer; }
+				.s4 { fill:#FBD27A;stroke:none; }
+				.s5 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s6 { font-size:12px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s7 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s8 { fill:none;stroke:#606060;stroke-width:1; }
+				.s9 { fill:#FFFFFF;stroke:none; }
+				.s10 { fill:#FF9368;stroke:none; }
+				.s11 { fill:#92DDF9;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1">
+		<image id="i166" xlink:href="Andriyasov.html.files/i166.jpg" x="0" y="0" width="1424.50769042969" height="868" preserveAspectRatio="none"/>
+	</g>
+	<g id="g2" transform="translate(335,0)">
+		<rect id="r165" class="s0" x="0" y="0" width="729" height="868"/>
+	</g>
+	<g id="g3" transform="translate(347,12)">
+		<g id="g4">
+			<line id="l152" class="s1" x1="245" y1="354.5" x2="275" y2="354.5"/>
+			<line id="l153" class="s2" x1="425" y1="362.5" x2="455" y2="362.5"/>
+			<line id="l154" class="s2" x1="350.5" y1="405.8125" x2="350.5" y2="605.8125"/>
+			<line id="l155" class="s2" x1="75.5" y1="102.90625" x2="75.5" y2="202.5"/>
+			<line id="l156" class="s2" x1="257.5" y1="102.90625" x2="257.5" y2="202.5"/>
+			<line id="l157" class="s2" x1="260.5" y1="202.5" x2="260.5" y2="354.5"/>
+			<line id="l158" class="s2" x1="440.5" y1="202.5" x2="440.5" y2="362.5"/>
+			<line id="l159" class="s2" x1="442.5" y1="102.90625" x2="442.5" y2="202.5"/>
+			<line id="l160" class="s2" x1="627.5" y1="102.90625" x2="627.5" y2="202.5"/>
+			<line id="l161" class="s2" x1="440.5" y1="202.5" x2="627.5" y2="202.5"/>
+			<line id="l162" class="s2" x1="75.5" y1="202.5" x2="260.5" y2="202.5"/>
+		</g>
+		<g id="g5">
+			<g id="g6" transform="translate(0,605.8125)">
+				<g id="g7" transform="translate(272.9208984375,0)">
+					<g id="g8">
+						<g id="g9">
+							<g id="g10">
+								<g id="g12" transform="translate(1.9189453125,0)" at:id="196" class="s3" onclick="nodeclick(196)">
+									<g id="g51" clip-path="url(#g67)">
+										<rect id="r52" class="s4" x="0.5" y="0.5" width="150.021484375" height="151.359375" rx="10" ry="10"/>
+										<image id="i55" xlink:href="Andriyasov.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t54" transform="translate(3,3)">
+											<text id="ts56" x="80" y="11.484375" class="s5">Андриясова</text>
+											<text id="ts57" x="80.8349609375" y="27.96875" class="s5">(Немченко)</text>
+											<text id="ts58" x="86.568359375" y="44.453125" class="s5">Алевтина</text>
+											<text id="ts59" x="94.5078125" y="60.9375" class="s5">(Алла)</text>
+											<text id="ts60" x="82.8740234375" y="77.421875" class="s5">Артемовна</text>
+											<text id="ts61" x="80.3779296875" y="93.90625" class="s5">(03.05.1958</text>
+											<text id="ts62" x="110.3310546875" y="110.390625" class="s5">-</text>
+											<text id="ts63" x="80.3779296875" y="126.875" class="s5">24.01.2015)</text>
+											<text id="ts64" x="81.3740234375" y="143.359375" class="s6">Мовсесяны</text>
+										</g>
+										<polygon id="p53" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r65" class="s8" x="0.5" y="0.5" width="150.021484375" height="151.359375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g67">
+											<rect id="r68" class="s9" x="0.5" y="0.5" width="150.021484375" height="151.359375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g11" transform="translate(0,151.359375)" at:id="197" class="s3" onclick="nodeclick(197)">
+									<g id="g41">
+										<rect id="r42" class="s10" x="0.5" y="0.5" width="153.859375" height="85.421875"/>
+										<image id="i44" xlink:href="Andriyasov.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t43" transform="translate(3,3)">
+											<text id="ts45" x="85.068359375" y="11.484375" class="s5">Андриясов</text>
+											<text id="ts46" x="91.1767578125" y="27.96875" class="s5">Валерий</text>
+											<text id="ts47" x="80.55078125" y="44.453125" class="s5">Михайлович</text>
+											<text id="ts48" x="80" y="60.9375" class="s5">(11.01.1960)</text>
+											<text id="ts49" x="80.19921875" y="77.421875" class="s6">Андриясовы</text>
+										</g>
+									</g>
+									<rect id="r50" class="s8" x="0.5" y="0.5" width="153.859375" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g13" transform="translate(0,302.90625)">
+				<g id="g14" transform="translate(90.4912109375,0)">
+					<g id="g15">
+						<g id="g16">
+							<g id="g21">
+								<g id="g22" at:id="199" class="s3" onclick="nodeclick(199)">
+									<g id="g69">
+										<rect id="r70" class="s11" x="0.5" y="0.5" width="153.859375" height="101.90625"/>
+										<image id="i72" xlink:href="Andriyasov.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t71" transform="translate(3,3)">
+											<text id="ts73" x="95.1435546875" y="11.484375" class="s5">Аваков</text>
+											<text id="ts74" x="97.724609375" y="27.96875" class="s5">Артем</text>
+											<text id="ts75" x="88.736328125" y="44.453125" class="s5">Заурович</text>
+											<text id="ts76" x="80" y="60.9375" class="s5">(21.12.1971)</text>
+											<text id="ts77" x="90.2734375" y="77.421875" class="s6">Аваковы</text>
+											<text id="ts78" x="80.3828125" y="93.90625" class="s6">(Пятигорск)</text>
+										</g>
+									</g>
+									<rect id="r79" class="s8" x="0.5" y="0.5" width="153.859375" height="101.90625"/>
+								</g>
+							</g>
+							<g id="g17" transform="translate(184.859375,0)">
+								<g id="g18" at:id="198" class="s3" onclick="nodeclick(198)">
+									<g id="g80" clip-path="url(#g92)">
+										<rect id="r81" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i83" xlink:href="Andriyasov.html.files/io148.jpg" x="1" y="1" width="62.9333343505859" height="80" preserveAspectRatio="none"/>
+										<g id="t82" transform="translate(3,3)">
+											<text id="ts84" x="81.031120300293" y="11.484375" class="s5">Авакова</text>
+											<text id="ts85" x="66.362174987793" y="27.96875" class="s5">(Андриясова)</text>
+											<text id="ts86" x="74.090690612793" y="44.453125" class="s5">Маргарита</text>
+											<text id="ts87" x="71.140495300293" y="60.9375" class="s5">Валерьевна</text>
+											<text id="ts88" x="69.036979675293" y="77.421875" class="s5">(25.11.1977)</text>
+											<text id="ts89" x="69.236198425293" y="93.90625" class="s6">Андриясовы</text>
+										</g>
+									</g>
+									<rect id="r90" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g92">
+											<rect id="r93" class="s9" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g19" transform="translate(364.859375,16.484375)">
+								<g id="g20" at:id="202" class="s3" onclick="nodeclick(202)">
+									<g id="g94">
+										<rect id="r95" class="s11" x="0.5" y="0.5" width="155.306640625" height="85.421875"/>
+										<image id="i97" xlink:href="Andriyasov.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t96" transform="translate(3,3)">
+											<text id="ts98" x="88.5576171875" y="11.484375" class="s5">Даллакян</text>
+											<text id="ts99" x="99.2314453125" y="27.96875" class="s5">Гарик</text>
+											<text id="ts100" x="80" y="44.453125" class="s5">Вачаганович</text>
+											<text id="ts101" x="80.7236328125" y="60.9375" class="s5">(11.07.1984)</text>
+											<text id="ts102" x="83.6884765625" y="77.421875" class="s6">Даллакяны</text>
+										</g>
+									</g>
+									<rect id="r103" class="s8" x="0.5" y="0.5" width="155.306640625" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g23">
+				<g id="g24">
+					<g id="g25">
+						<g id="g26">
+							<g id="g27">
+								<g id="g28" at:id="200" class="s3" onclick="nodeclick(200)">
+									<g id="g104">
+										<rect id="r105" class="s11" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i107" xlink:href="Andriyasov.html.files/io149.jpg" x="1" y="1" width="64.5161285400391" height="80" preserveAspectRatio="none"/>
+										<g id="t106" transform="translate(3,3)">
+											<text id="ts108" x="84.9719314575195" y="11.484375" class="s5">Аваков</text>
+											<text id="ts109" x="81.0051345825195" y="27.96875" class="s5">Валерий</text>
+											<text id="ts110" x="74.5100173950195" y="44.453125" class="s5">Артемович</text>
+											<text id="ts111" x="69.8283767700195" y="60.9375" class="s5">(23.12.1998)</text>
+											<text id="ts112" x="80.1018142700195" y="77.421875" class="s6">Аваковы</text>
+											<text id="ts113" x="70.2111892700195" y="93.90625" class="s6">(Пятигорск)</text>
+										</g>
+									</g>
+									<rect id="r114" class="s8" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g29" transform="translate(180,0)">
+						<g id="g30">
+							<g id="g31">
+								<g id="g32" at:id="201" class="s3" onclick="nodeclick(201)">
+									<g id="g115" clip-path="url(#g127)">
+										<rect id="r116" class="s4" x="0.5" y="0.5" width="153.859375" height="101.90625" rx="10" ry="10"/>
+										<image id="i118" xlink:href="Andriyasov.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t117" transform="translate(3,3)">
+											<text id="ts119" x="91.994140625" y="11.484375" class="s5">Авакова</text>
+											<text id="ts120" x="91.4462890625" y="27.96875" class="s5">Зинаида</text>
+											<text id="ts121" x="84.79296875" y="44.453125" class="s5">Артемовна</text>
+											<text id="ts122" x="80" y="60.9375" class="s5">(30.03.2001)</text>
+											<text id="ts123" x="90.2734375" y="77.421875" class="s6">Аваковы</text>
+											<text id="ts124" x="80.3828125" y="93.90625" class="s6">(Пятигорск)</text>
+										</g>
+									</g>
+									<rect id="r125" class="s8" x="0.5" y="0.5" width="153.859375" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g127">
+											<rect id="r128" class="s9" x="0.5" y="0.5" width="153.859375" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g33" transform="translate(364.859375,16.484375)">
+						<g id="g34">
+							<g id="g35">
+								<g id="g36" at:id="203" class="s3" onclick="nodeclick(203)">
+									<g id="g129" clip-path="url(#g140)">
+										<rect id="r130" class="s4" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										<image id="i132" xlink:href="Andriyasov.html.files/5.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t131" transform="translate(3,3)">
+											<text id="ts133" x="87.833984375" y="11.484375" class="s5">Даллакян</text>
+											<text id="ts134" x="97.2705078125" y="27.96875" class="s5">Диана</text>
+											<text id="ts135" x="85.619140625" y="44.453125" class="s5">Гариковна</text>
+											<text id="ts136" x="80" y="60.9375" class="s5">(12.03.2009)</text>
+											<text id="ts137" x="82.96484375" y="77.421875" class="s6">Даллакяны</text>
+										</g>
+									</g>
+									<rect id="r138" class="s8" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g140">
+											<rect id="r141" class="s9" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g37" transform="translate(549.71875,16.484375)">
+						<g id="g38">
+							<g id="g39">
+								<g id="g40" at:id="204" class="s3" onclick="nodeclick(204)">
+									<g id="g142">
+										<rect id="r143" class="s11" x="0.5" y="0.5" width="153.859375" height="85.421875"/>
+										<image id="i145" xlink:href="Andriyasov.html.files/6.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t144" transform="translate(3,3)">
+											<text id="ts146" x="87.833984375" y="11.484375" class="s5">Даллакян</text>
+											<text id="ts147" x="92.3193359375" y="27.96875" class="s5">Вачаган</text>
+											<text id="ts148" x="85.5078125" y="44.453125" class="s5">Гарикович</text>
+											<text id="ts149" x="80" y="60.9375" class="s5">(29.03.2014)</text>
+											<text id="ts150" x="82.96484375" y="77.421875" class="s6">Даллакяны</text>
+										</g>
+									</g>
+									<rect id="r151" class="s8" x="0.5" y="0.5" width="153.859375" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>

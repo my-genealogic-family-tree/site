@@ -1,0 +1,301 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="Adamyan.html.files/p' + i + '.html?s=40e6351f6a3a99a1" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="1629.38452148438" height="993" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:none;stroke:none; }
+				.s1 { stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s2 { stroke-dasharray:3,6;stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s3 { cursor:pointer; }
+				.s4 { fill:#FBD27A;stroke:none; }
+				.s5 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s6 { font-size:12px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s7 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s8 { fill:none;stroke:#606060;stroke-width:1; }
+				.s9 { fill:#FFFFFF;stroke:none; }
+				.s10 { fill:#FF9368;stroke:none; }
+				.s11 { fill:#92DDF9;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1">
+		<image id="i157" xlink:href="Adamyan.html.files/i157.jpg" x="0" y="0" width="1629.38452148438" height="992.838317871094" preserveAspectRatio="none"/>
+	</g>
+	<g id="g2" transform="translate(615,1)">
+		<rect id="r156" class="s0" x="0" y="0" width="448" height="992"/>
+	</g>
+	<g id="g3" transform="translate(627,13)">
+		<g id="g4">
+			<line id="l139" class="s1" x1="75.5" y1="551.328125" x2="75.5" y2="651.5"/>
+			<line id="l140" class="s1" x1="165.5" y1="651.5" x2="165.5" y2="751.328125"/>
+			<line id="l141" class="s1" x1="255.5" y1="551.328125" x2="255.5" y2="651.5"/>
+			<line id="l142" class="s1" x1="75.5" y1="651.5" x2="255.5" y2="651.5"/>
+			<line id="l143" class="s1" x1="75.5" y1="233.5" x2="75.5" y2="367.421875"/>
+			<line id="l144" class="s2" x1="159.5" y1="167.421875" x2="159.5" y2="233.5"/>
+			<line id="l145" class="s1" x1="168.5" y1="167.421875" x2="168.5" y2="301.5"/>
+			<line id="l146" class="s1" x1="255.5" y1="301.5" x2="255.5" y2="367.421875"/>
+			<line id="l147" class="s1" x1="346.5" y1="167.421875" x2="346.5" y2="301.5"/>
+			<line id="l148" class="s1" x1="75.5" y1="233.5" x2="159.5" y2="233.5"/>
+			<line id="l149" class="s1" x1="168.5" y1="301.5" x2="346.5" y2="301.5"/>
+		</g>
+		<g id="g5">
+			<g id="g6" transform="translate(0,751.328125)">
+				<g id="g7" transform="translate(90,0)">
+					<g id="g8">
+						<g id="g9">
+							<g id="g10">
+								<g id="g12" at:id="219" class="s3" onclick="nodeclick(219)">
+									<g id="g45" clip-path="url(#g60)">
+										<rect id="r46" class="s4" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										<image id="i49" xlink:href="Adamyan.html.files/io158.jpg" x="1" y="1" width="65.3061218261719" height="80" preserveAspectRatio="none"/>
+										<g id="t48" transform="translate(3,3)">
+											<text id="ts50" x="84.1804046630859" y="11.484375" class="s5">Адамян</text>
+											<text id="ts51" x="73.7917327880859" y="27.96875" class="s5">(Мовсесян)</text>
+											<text id="ts52" x="90.6930999755859" y="44.453125" class="s5">Нина</text>
+											<text id="ts53" x="72.3679046630859" y="60.9375" class="s5">Петросовна</text>
+											<text id="ts54" x="72.5202484130859" y="77.421875" class="s5">(13.03.1927</text>
+											<text id="ts55" x="102.473373413086" y="93.90625" class="s5">-</text>
+											<text id="ts56" x="99.5143890380859" y="110.390625" class="s5">?)</text>
+											<text id="ts57" x="73.5163421630859" y="126.875" class="s6">Мовсесяны</text>
+										</g>
+										<polygon id="p47" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r58" class="s8" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g60">
+											<rect id="r61" class="s9" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g11" transform="translate(0,134.875)" at:id="220" class="s3" onclick="nodeclick(220)">
+									<g id="g36">
+										<rect id="r37" class="s10" x="0.5" y="0.5" width="149" height="81"/>
+										<image id="i39" xlink:href="Adamyan.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t38" transform="translate(3,3)">
+											<text id="ts40" x="91.52734375" y="11.484375" class="s5">Адамян</text>
+											<text id="ts41" x="89.494140625" y="27.96875" class="s5">Альберт</text>
+											<text id="ts42" x="87.830078125" y="44.453125" class="s5">(07.02.?)</text>
+											<text id="ts43" x="86.658203125" y="60.9375" class="s6">Адамяны</text>
+										</g>
+									</g>
+									<rect id="r44" class="s8" x="0.5" y="0.5" width="149" height="81"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g13" transform="translate(0,367.421875)">
+				<g id="g14">
+					<g id="g15">
+						<g id="g16">
+							<g id="g17">
+								<g id="g18" transform="translate(0,81)" at:id="221" class="s3" onclick="nodeclick(221)">
+									<g id="g62">
+										<rect id="r63" class="s11" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i65" xlink:href="Adamyan.html.files/io159.jpg" x="1" y="1" width="58.4455947875977" height="80" preserveAspectRatio="none"/>
+										<g id="t64" transform="translate(3,3)">
+											<text id="ts66" x="80.7501373291016" y="11.484375" class="s5">Адамян</text>
+											<text id="ts67" x="80.7501373291016" y="27.96875" class="s5">Норайр</text>
+											<text id="ts68" x="79.6339263916016" y="44.453125" class="s5">(Норик)</text>
+											<text id="ts69" x="65.6739730834961" y="60.9375" class="s5">Альбертович</text>
+											<text id="ts70" x="66.7931060791016" y="77.421875" class="s5">(04.01.1951)</text>
+											<text id="ts71" x="75.8809967041016" y="93.90625" class="s6">Адамяны</text>
+										</g>
+									</g>
+									<rect id="r72" class="s8" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+								<g id="g19" at:id="222" class="s3" onclick="nodeclick(222)">
+									<g id="g73" clip-path="url(#g83)">
+										<rect id="r74" class="s4" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i76" xlink:href="Adamyan.html.files/io160.jpg" x="1" y="1" width="56.3380279541016" height="80" preserveAspectRatio="none"/>
+										<g id="t75" transform="translate(3,3)">
+											<text id="ts77" x="74.8975296020508" y="11.484375" class="s5">Ширикян</text>
+											<text id="ts78" x="86.6924514770508" y="27.96875" class="s5">Аида</text>
+											<text id="ts79" x="65.7393264770508" y="44.453125" class="s5">(08.03.1954)</text>
+											<text id="ts80" x="70.0283889770508" y="60.9375" class="s6">Ширикяны</text>
+										</g>
+									</g>
+									<rect id="r81" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g83">
+											<rect id="r84" class="s9" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g20" transform="translate(180,0)">
+						<g id="g21">
+							<g id="g22">
+								<g id="g23" transform="translate(0,81)" at:id="223" class="s3" onclick="nodeclick(223)">
+									<g id="g85">
+										<rect id="r86" class="s11" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i88" xlink:href="Adamyan.html.files/io165.jpg" x="1" y="1" width="60.6060600280762" height="80" preserveAspectRatio="none"/>
+										<g id="t87" transform="translate(3,3)">
+											<text id="ts89" x="81.8303680419922" y="11.484375" class="s5">Адамян</text>
+											<text id="ts90" x="83.1135711669922" y="27.96875" class="s5">Оганес</text>
+											<text id="ts91" x="83.9485321044922" y="44.453125" class="s5">(Овик)</text>
+											<text id="ts92" x="66.7541961669922" y="60.9375" class="s5">Альбертович</text>
+											<text id="ts93" x="67.8733367919922" y="77.421875" class="s5">(06.05.1957)</text>
+											<text id="ts94" x="76.9612274169922" y="93.90625" class="s6">Адамяны</text>
+										</g>
+									</g>
+									<rect id="r95" class="s8" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+								<g id="g24" at:id="225" class="s3" onclick="nodeclick(225)">
+									<g id="g96" clip-path="url(#g105)">
+										<rect id="r97" class="s4" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i99" xlink:href="Adamyan.html.files/io164.jpg" x="1" y="1" width="57.9710159301758" height="80" preserveAspectRatio="none"/>
+										<g id="t98" transform="translate(3,3)">
+											<text id="ts100" x="80.5128479003906" y="11.484375" class="s5">Адамян</text>
+											<text id="ts101" x="84.3155822753906" y="27.96875" class="s5">Лаура</text>
+											<text id="ts102" x="76.8155822753906" y="44.453125" class="s5">(30.11.?)</text>
+										</g>
+									</g>
+									<rect id="r103" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g105">
+											<rect id="r106" class="s9" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g25">
+				<g id="g26" transform="translate(88.603515625,0)">
+					<g id="g27" transform="translate(0,85.421875)">
+						<g id="g28">
+							<g id="g29">
+								<g id="g30" at:id="224" class="s3" onclick="nodeclick(224)">
+									<g id="g107" clip-path="url(#g117)">
+										<rect id="r108" class="s4" x="0.5" y="0.5" width="149.2421875" height="81" rx="10" ry="10"/>
+										<image id="i110" xlink:href="Adamyan.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t109" transform="translate(3,3)">
+											<text id="ts111" x="91.6484375" y="11.484375" class="s5">Адамян</text>
+											<text id="ts112" x="94.8681640625" y="27.96875" class="s5">Нелли</text>
+											<text id="ts113" x="80" y="44.453125" class="s5">Оганесовна</text>
+											<text id="ts114" x="86.779296875" y="60.9375" class="s6">Адамяны</text>
+										</g>
+									</g>
+									<rect id="r115" class="s8" x="0.5" y="0.5" width="149.2421875" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g117">
+											<rect id="r118" class="s9" x="0.5" y="0.5" width="149.2421875" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g31" transform="translate(180.2421875,0)">
+						<g id="g32">
+							<g id="g33">
+								<g id="g34" transform="translate(0,81)" at:id="226" class="s3" onclick="nodeclick(226)">
+									<g id="g119">
+										<rect id="r120" class="s11" x="0.5" y="0.5" width="153.859375" height="85.421875"/>
+										<image id="i122" xlink:href="Adamyan.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t121" transform="translate(3,3)">
+											<text id="ts123" x="93.95703125" y="11.484375" class="s5">Адамян</text>
+											<text id="ts124" x="91.923828125" y="27.96875" class="s5">Альберт</text>
+											<text id="ts125" x="82.197265625" y="44.453125" class="s5">Оганесович</text>
+											<text id="ts126" x="80" y="60.9375" class="s5">(27.01.1985)</text>
+											<text id="ts127" x="89.087890625" y="77.421875" class="s6">Адамяны</text>
+										</g>
+									</g>
+									<rect id="r128" class="s8" x="0.5" y="0.5" width="153.859375" height="85.421875"/>
+								</g>
+								<g id="g35" transform="translate(2.4296875,0)" at:id="227" class="s3" onclick="nodeclick(227)">
+									<g id="g129" clip-path="url(#g137)">
+										<rect id="r130" class="s4" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i132" xlink:href="Adamyan.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t131" transform="translate(3,3)">
+											<text id="ts133" x="91.52734375" y="11.484375" class="s5">Адамян</text>
+											<text id="ts134" x="84.6337890625" y="27.96875" class="s5">Анжелика</text>
+										</g>
+									</g>
+									<rect id="r135" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g137">
+											<rect id="r138" class="s9" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>

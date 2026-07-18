@@ -1,0 +1,427 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="Pogosyan.html.files/p' + i + '.html?s=40e64b9ca131408b" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="2262.94409179688" height="1378.88720703125" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:none;stroke:none; }
+				.s1 { stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s2 { cursor:pointer; }
+				.s3 { fill:#FBD27A;stroke:none; }
+				.s4 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s5 { font-size:12px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s6 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s7 { fill:none;stroke:#606060;stroke-width:1; }
+				.s8 { fill:#FFFFFF;stroke:none; }
+				.s9 { fill:#FF9368;stroke:none; }
+				.s10 { fill:#92DDF9;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1">
+		<image id="i245" xlink:href="Pogosyan.html.files/i245.jpg" x="0" y="0" width="2262.94409179688" height="1378.88720703125" preserveAspectRatio="none"/>
+	</g>
+	<g id="g2" transform="translate(736,0)">
+		<rect id="r244" class="s0" x="0" y="0" width="784" height="1349"/>
+	</g>
+	<g id="g3" transform="translate(748,12)">
+		<g id="g4">
+			<line id="l225" class="s1" x1="165.5" y1="854.234375" x2="165.5" y2="954.5"/>
+			<line id="l226" class="s1" x1="380.5" y1="954.5" x2="380.5" y2="1054.234375"/>
+			<line id="l227" class="s1" x1="595.5" y1="854.234375" x2="595.5" y2="954.5"/>
+			<line id="l228" class="s1" x1="165.5" y1="954.5" x2="595.5" y2="954.5"/>
+			<line id="l229" class="s1" x1="75.5" y1="453.84375" x2="75.5" y2="553.5"/>
+			<line id="l230" class="s1" x1="165.5" y1="553.5" x2="165.5" y2="670.328125"/>
+			<line id="l231" class="s1" x1="255.5" y1="453.84375" x2="255.5" y2="553.5"/>
+			<line id="l232" class="s1" x1="505.5" y1="453.84375" x2="505.5" y2="553.5"/>
+			<line id="l233" class="s1" x1="595.5" y1="553.5" x2="595.5" y2="653.84375"/>
+			<line id="l234" class="s1" x1="685.5" y1="453.84375" x2="685.5" y2="553.5"/>
+			<line id="l235" class="s1" x1="505.5" y1="553.5" x2="685.5" y2="553.5"/>
+			<line id="l236" class="s1" x1="75.5" y1="553.5" x2="255.5" y2="553.5"/>
+			<line id="l237" class="s1" x1="325.5" y1="86.421875" x2="325.5" y2="186.5"/>
+			<line id="l238" class="s1" x1="505.5" y1="86.421875" x2="505.5" y2="186.5"/>
+			<line id="l239" class="s1" x1="505.5" y1="186.5" x2="505.5" y2="286.421875"/>
+			<line id="l240" class="s1" x1="685.5" y1="86.421875" x2="685.5" y2="186.5"/>
+			<line id="l241" class="s1" x1="325.5" y1="186.5" x2="685.5" y2="186.5"/>
+		</g>
+		<g id="g5">
+			<g id="g6" transform="translate(0,1054.234375)">
+				<g id="g7" transform="translate(305,0)">
+					<g id="g8">
+						<g id="g9">
+							<g id="g10">
+								<g id="g12" at:id="160" class="s2" onclick="nodeclick(160)">
+									<g id="g73" clip-path="url(#g88)">
+										<rect id="r74" class="s3" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										<image id="i77" xlink:href="Pogosyan.html.files/io112.JPG" x="1" y="1" width="54.7945213317871" height="80" preserveAspectRatio="none"/>
+										<g id="t76" transform="translate(3,3)">
+											<text id="ts78" x="77.0261688232422" y="11.484375" class="s4">Погосян</text>
+											<text id="ts79" x="68.0173797607422" y="27.96875" class="s4">(Мхитарян)</text>
+											<text id="ts80" x="82.9236297607422" y="44.453125" class="s4">Назан</text>
+											<text id="ts81" x="69.6287078857422" y="60.9375" class="s4">Цолаковна</text>
+											<text id="ts82" x="67.2644500732422" y="77.421875" class="s4">(16.04.1945</text>
+											<text id="ts83" x="97.2175750732422" y="93.90625" class="s4">-</text>
+											<text id="ts84" x="67.2644500732422" y="110.390625" class="s4">22.11.2019)</text>
+											<text id="ts85" x="67.7410125732422" y="126.875" class="s5">Мхитаряны</text>
+										</g>
+										<polygon id="p75" class="s6" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r86" class="s7" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g88">
+											<rect id="r89" class="s8" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g11" transform="translate(0,134.875)" at:id="162" class="s2" onclick="nodeclick(162)">
+									<g id="g59">
+										<rect id="r60" class="s9" x="0.5" y="0.5" width="149" height="134.875"/>
+										<image id="i63" xlink:href="Pogosyan.html.files/io135.JPG" x="1" y="1" width="60.3773574829102" height="80" preserveAspectRatio="none"/>
+										<g id="t62" transform="translate(3,3)">
+											<text id="ts64" x="79.8175811767578" y="11.484375" class="s4">Погосян</text>
+											<text id="ts65" x="84.7589874267578" y="27.96875" class="s4">Рафик</text>
+											<text id="ts66" x="72.4464874267578" y="44.453125" class="s4">Овсепович</text>
+											<text id="ts67" x="70.0558624267578" y="60.9375" class="s4">(17.01.1939</text>
+											<text id="ts68" x="100.008987426758" y="77.421875" class="s4">-</text>
+											<text id="ts69" x="70.0558624267578" y="93.90625" class="s4">06.02.2012)</text>
+											<text id="ts70" x="74.9484405517578" y="110.390625" class="s5">Погосяны</text>
+											<text id="ts71" x="93.0890655517578" y="126.875" class="s5">(1)</text>
+										</g>
+										<polygon id="p61" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r72" class="s7" x="0.5" y="0.5" width="149" height="134.875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g13" transform="translate(0,653.84375)">
+				<g id="g14" transform="translate(90,0)">
+					<g id="g15" transform="translate(0,16.484375)">
+						<g id="g16">
+							<g id="g17">
+								<g id="g18" transform="translate(0,81)" at:id="242" class="s2" onclick="nodeclick(242)">
+									<g id="g90">
+										<rect id="r91" class="s10" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i93" xlink:href="Pogosyan.html.files/io186.JPG" x="1" y="1" width="57.553955078125" height="80" preserveAspectRatio="none"/>
+										<g id="t92" transform="translate(3,3)">
+											<text id="ts94" x="78.4058837890625" y="11.484375" class="s4">Погосян</text>
+											<text id="ts95" x="78.2711181640625" y="27.96875" class="s4">Альберт</text>
+											<text id="ts96" x="70.3492431640625" y="44.453125" class="s4">Рафикович</text>
+											<text id="ts97" x="66.3472900390625" y="60.9375" class="s4">(20.12.1964)</text>
+											<text id="ts98" x="73.5367431640625" y="77.421875" class="s5">Погосяны</text>
+											<text id="ts99" x="91.6773681640625" y="93.90625" class="s5">(1)</text>
+										</g>
+									</g>
+									<rect id="r100" class="s7" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+								<g id="g19" at:id="243" class="s2" onclick="nodeclick(243)">
+									<g id="g101" clip-path="url(#g111)">
+										<rect id="r102" class="s3" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i104" xlink:href="Pogosyan.html.files/io185.JPG" x="1" y="1" width="56.5371017456055" height="80" preserveAspectRatio="none"/>
+										<g id="t103" transform="translate(3,3)">
+											<text id="ts105" x="77.8974609375" y="11.484375" class="s4">Погосян</text>
+											<text id="ts106" x="84.3720703125" y="27.96875" class="s4">Гаяне</text>
+											<text id="ts107" x="73.7490234375" y="44.453125" class="s4">Мгеровна</text>
+											<text id="ts108" x="65.8388671875" y="60.9375" class="s4">(15.11.1965)</text>
+										</g>
+									</g>
+									<rect id="r109" class="s7" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g111">
+											<rect id="r112" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g20" transform="translate(430,0)">
+						<g id="g21">
+							<g id="g22">
+								<g id="g23" transform="translate(0,81)" at:id="161" class="s2" onclick="nodeclick(161)">
+									<g id="g113" clip-path="url(#g126)">
+										<rect id="r114" class="s3" x="0.5" y="0.5" width="149" height="118.390617370605" rx="10" ry="10"/>
+										<image id="i116" xlink:href="Pogosyan.html.files/io107.jpg" x="1" y="1" width="60.1503753662109" height="80" preserveAspectRatio="none"/>
+										<g id="t115" transform="translate(3,3)">
+											<text id="ts117" x="70.6220626831055" y="11.484375" class="s4">Багдасарян</text>
+											<text id="ts118" x="75.1103439331055" y="27.96875" class="s4">(Погосян)</text>
+											<text id="ts119" x="82.4081954956055" y="44.453125" class="s4">Каринэ</text>
+											<text id="ts120" x="71.7587814331055" y="60.9375" class="s4">Рафиковна</text>
+											<text id="ts121" x="67.6455001831055" y="77.421875" class="s4">(17.12.1969)</text>
+											<text id="ts122" x="74.8349533081055" y="93.90625" class="s5">Погосяны</text>
+											<text id="ts123" x="92.9755783081055" y="110.390625" class="s5">(1)</text>
+										</g>
+									</g>
+									<rect id="r124" class="s7" x="0.5" y="0.5" width="149" height="118.390617370605" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g126">
+											<rect id="r127" class="s8" x="0.5" y="0.5" width="149" height="118.390617370605" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g24" at:id="163" class="s2" onclick="nodeclick(163)">
+									<g id="g128">
+										<rect id="r129" class="s10" x="0.5" y="0.5" width="149" height="81"/>
+										<image id="i131" xlink:href="Pogosyan.html.files/io108.jpg" x="1" y="1" width="55.7491302490234" height="80" preserveAspectRatio="none"/>
+										<g id="t130" transform="translate(3,3)">
+											<text id="ts132" x="68.4214401245117" y="11.484375" class="s4">Багдасарян</text>
+											<text id="ts133" x="83.8550338745117" y="27.96875" class="s4">Артур</text>
+											<text id="ts134" x="63.5522994995117" y="44.453125" class="s5">Багдасаряны</text>
+										</g>
+									</g>
+									<rect id="r135" class="s7" x="0.5" y="0.5" width="149" height="81"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g25" transform="translate(0,286.421875)">
+				<g id="g26" transform="translate(0,64.515625)">
+					<g id="g27">
+						<g id="g28">
+							<g id="g29">
+								<g id="g30" at:id="245" class="s2" onclick="nodeclick(245)">
+									<g id="g136" clip-path="url(#g148)">
+										<rect id="r137" class="s3" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i139" xlink:href="Pogosyan.html.files/io182.jpg" x="1" y="1" width="55.7491302490234" height="80" preserveAspectRatio="none"/>
+										<g id="t138" transform="translate(3,3)">
+											<text id="ts140" x="77.5034713745117" y="11.484375" class="s4">Погосян</text>
+											<text id="ts141" x="70.4985885620117" y="27.96875" class="s4">Маргарита</text>
+											<text id="ts142" x="64.4370651245117" y="44.453125" class="s4">Альбертовна</text>
+											<text id="ts143" x="65.4448776245117" y="60.9375" class="s4">(13.12.1988)</text>
+											<text id="ts144" x="72.6343307495117" y="77.421875" class="s5">Погосяны</text>
+											<text id="ts145" x="90.7749557495117" y="93.90625" class="s5">(1)</text>
+										</g>
+									</g>
+									<rect id="r146" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g148">
+											<rect id="r149" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g31" transform="translate(180,0)">
+						<g id="g32">
+							<g id="g33">
+								<g id="g34" at:id="244" class="s2" onclick="nodeclick(244)">
+									<g id="g150">
+										<rect id="r151" class="s10" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i153" xlink:href="Pogosyan.html.files/io184.JPG" x="1" y="1" width="52.9323310852051" height="80" preserveAspectRatio="none"/>
+										<g id="t152" transform="translate(3,3)">
+											<text id="ts154" x="76.0950775146484" y="11.484375" class="s4">Погосян</text>
+											<text id="ts155" x="82.6810150146484" y="27.96875" class="s4">Юрий</text>
+											<text id="ts156" x="62.9173393249512" y="44.453125" class="s4">Альбертович</text>
+											<text id="ts157" x="64.0364837646484" y="60.9375" class="s4">(09.03.1996)</text>
+											<text id="ts158" x="71.2259368896484" y="77.421875" class="s5">Погосяны</text>
+											<text id="ts159" x="89.3665618896484" y="93.90625" class="s5">(1)</text>
+										</g>
+									</g>
+									<rect id="r160" class="s7" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g35" transform="translate(430,0)">
+					<g id="g36">
+						<g id="g37">
+							<g id="g38">
+								<g id="g39" transform="translate(0,81)" at:id="164" class="s2" onclick="nodeclick(164)">
+									<g id="g161" clip-path="url(#g172)">
+										<rect id="r162" class="s3" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i164" xlink:href="Pogosyan.html.files/io109.jpg" x="1" y="1" width="53.691276550293" height="80" preserveAspectRatio="none"/>
+										<g id="t163" transform="translate(3,3)">
+											<text id="ts165" x="67.3925170898438" y="11.484375" class="s4">Багдасарян</text>
+											<text id="ts166" x="75.6366577148438" y="27.96875" class="s4">Рипсиме</text>
+											<text id="ts167" x="69.8944702148438" y="44.453125" class="s4">Артуровна</text>
+											<text id="ts168" x="64.4159545898438" y="60.9375" class="s4">(14.01.1992)</text>
+											<text id="ts169" x="62.5233726501465" y="77.421875" class="s5">Багдасаряны</text>
+										</g>
+									</g>
+									<rect id="r170" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g172">
+											<rect id="r173" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g40" at:id="165" class="s2" onclick="nodeclick(165)">
+									<g id="g174">
+										<rect id="r175" class="s10" x="0.5" y="0.5" width="149" height="81"/>
+										<image id="i177" xlink:href="Pogosyan.html.files/io110.jpg" x="1" y="1" width="59.4795532226563" height="80" preserveAspectRatio="none"/>
+										<g id="t176" transform="translate(3,3)">
+											<text id="ts178" x="72.7182922363281" y="11.484375" class="s4">Киракосян</text>
+											<text id="ts179" x="79.3061828613281" y="27.96875" class="s4">Спартак</text>
+											<text id="ts180" x="67.8491516113281" y="44.453125" class="s5">Киракосяны</text>
+										</g>
+									</g>
+									<rect id="r181" class="s7" x="0.5" y="0.5" width="149" height="81"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g41" transform="translate(180,81)">
+						<g id="g42">
+							<g id="g43">
+								<g id="g44" at:id="168" class="s2" onclick="nodeclick(168)">
+									<g id="g182">
+										<rect id="r183" class="s10" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i185" xlink:href="Pogosyan.html.files/io111.JPG" x="1" y="1" width="57.553955078125" height="80" preserveAspectRatio="none"/>
+										<g id="t184" transform="translate(3,3)">
+											<text id="ts186" x="69.3238525390625" y="11.484375" class="s4">Багдасарян</text>
+											<text id="ts187" x="80.1226806640625" y="27.96875" class="s4">Рафаел</text>
+											<text id="ts188" x="71.7144775390625" y="44.453125" class="s4">Артурович</text>
+											<text id="ts189" x="66.3472900390625" y="60.9375" class="s4">(12.07.1994)</text>
+											<text id="ts190" x="64.4547119140625" y="77.421875" class="s5">Багдасаряны</text>
+										</g>
+									</g>
+									<rect id="r191" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g45">
+				<g id="g46" transform="translate(250,0)">
+					<g id="g47">
+						<g id="g48">
+							<g id="g49">
+								<g id="g50" at:id="166" class="s2" onclick="nodeclick(166)">
+									<g id="g192">
+										<rect id="r193" class="s10" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i195" xlink:href="Pogosyan.html.files/io476.jpg" x="1" y="1" width="63.2967071533203" height="80" preserveAspectRatio="none"/>
+										<g id="t194" transform="translate(3,3)">
+											<text id="ts196" x="74.6268692016602" y="11.484375" class="s4">Киракосян</text>
+											<text id="ts197" x="88.5506973266602" y="27.96875" class="s4">Гагик</text>
+											<text id="ts198" x="68.2167129516602" y="44.453125" class="s4">Спартакович</text>
+											<text id="ts199" x="69.2186660766602" y="60.9375" class="s4">(12.05.2018)</text>
+											<text id="ts200" x="69.7577285766602" y="77.421875" class="s5">Киракосяны</text>
+										</g>
+									</g>
+									<rect id="r201" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g51" transform="translate(180,0)">
+						<g id="g52">
+							<g id="g53">
+								<g id="g54" at:id="167" class="s2" onclick="nodeclick(167)">
+									<g id="g202">
+										<rect id="r203" class="s10" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i205" xlink:href="Pogosyan.html.files/io477.jpg" x="1" y="1" width="50.9497222900391" height="80" preserveAspectRatio="none"/>
+										<g id="t204" transform="translate(3,3)">
+											<text id="ts206" x="68.4533767700195" y="11.484375" class="s4">Киракосян</text>
+											<text id="ts207" x="79.0324783325195" y="27.96875" class="s4">Баграт</text>
+											<text id="ts208" x="62.0432205200195" y="44.453125" class="s4">Спартакович</text>
+											<text id="ts209" x="63.0451736450195" y="60.9375" class="s4">(09.05.2020)</text>
+											<text id="ts210" x="63.5842361450195" y="77.421875" class="s5">Киракосяны</text>
+										</g>
+									</g>
+									<rect id="r211" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g55" transform="translate(360,0)">
+						<g id="g56">
+							<g id="g57">
+								<g id="g58" at:id="608" class="s2" onclick="nodeclick(608)">
+									<g id="g212" clip-path="url(#g223)">
+										<rect id="r213" class="s3" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i215" xlink:href="Pogosyan.html.files/io478.jpg" x="1" y="1" width="70.9774398803711" height="80" preserveAspectRatio="none"/>
+										<g id="t214" transform="translate(3,3)">
+											<text id="ts216" x="78.4672317504883" y="11.484375" class="s4">Киракосян</text>
+											<text id="ts217" x="96.3178253173828" y="27.96875" class="s4">Мия</text>
+											<text id="ts218" x="72.1684036254883" y="44.453125" class="s4">Спартаковна</text>
+											<text id="ts219" x="81.4262237548828" y="60.9375" class="s4">(07.2024)</text>
+											<text id="ts220" x="73.5980911254883" y="77.421875" class="s5">Киракосяны</text>
+										</g>
+									</g>
+									<rect id="r221" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g223">
+											<rect id="r224" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>

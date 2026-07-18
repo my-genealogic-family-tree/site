@@ -1,0 +1,1409 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="Mayraments.html.files/p' + i + '.html?s=40e6791a8ce86c16" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="7522.3701171875" height="4583.630859375" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:none;stroke:none; }
+				.s1 { stroke-dasharray:3,6;stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s2 { stroke:#FFFFFF;stroke-width:3;stroke-linecap:square; }
+				.s3 { cursor:pointer; }
+				.s4 { fill:#FBD27A;stroke:none; }
+				.s5 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s6 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s7 { fill:none;stroke:#606060;stroke-width:1; }
+				.s8 { fill:#FFFFFF;stroke:none; }
+				.s9 { fill:#FF9368;stroke:none; }
+				.s10 { font-size:12px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s11 { fill:#92DDF9;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1">
+		<image id="i954" xlink:href="Mayraments.html.files/i954.jpg" x="0" y="0" width="7522.3701171875" height="4583.630859375" preserveAspectRatio="none"/>
+	</g>
+	<g id="g2" transform="translate(1450,900)">
+		<rect id="r953" class="s0" x="0" y="0" width="3694" height="2688"/>
+	</g>
+	<g id="g3" transform="translate(1462,912)">
+		<g id="g4">
+			<line id="l887" class="s1" x1="2190" y1="1342.5" x2="2220" y2="1342.5"/>
+			<line id="l888" class="s1" x1="3055" y1="852.5" x2="3085" y2="852.5"/>
+			<line id="l889" class="s2" x1="1590.5" y1="2275.328125" x2="1590.5" y2="2375.5"/>
+			<line id="l890" class="s2" x1="2275.5" y1="2375.5" x2="2275.5" y2="2475.328125"/>
+			<line id="l891" class="s2" x1="2961.5" y1="2275.328125" x2="2961.5" y2="2375.5"/>
+			<line id="l892" class="s2" x1="1590.5" y1="2375.5" x2="2961.5" y2="2375.5"/>
+			<line id="l893" class="s2" x1="1590.5" y1="1837.546875" x2="1590.5" y2="2037.546875"/>
+			<line id="l894" class="s2" x1="2961.5" y1="1837.546875" x2="2961.5" y2="2037.546875"/>
+			<line id="l895" class="s2" x1="885.5" y1="1383.28125" x2="885.5" y2="1483.5"/>
+			<line id="l896" class="s2" x1="1590.5" y1="1483.5" x2="1590.5" y2="1583.28125"/>
+			<line id="l897" class="s2" x1="1865.5" y1="1383.28125" x2="1865.5" y2="1483.5"/>
+			<line id="l898" class="s2" x1="2295.5" y1="1383.28125" x2="2295.5" y2="1483.5"/>
+			<line id="l899" class="s2" x1="2545.5" y1="1383.28125" x2="2545.5" y2="1483.5"/>
+			<line id="l900" class="s2" x1="2725.5" y1="1383.28125" x2="2725.5" y2="1483.5"/>
+			<line id="l901" class="s2" x1="2961.5" y1="1483.5" x2="2961.5" y2="1632.734375"/>
+			<line id="l902" class="s2" x1="3377.5" y1="1383.28125" x2="3377.5" y2="1483.5"/>
+			<line id="l903" class="s2" x1="2545.5" y1="1483.5" x2="3377.5" y2="1483.5"/>
+			<line id="l904" class="s2" x1="885.5" y1="1483.5" x2="2295.5" y2="1483.5"/>
+			<line id="l905" class="s2" x1="245.5" y1="896.046875" x2="245.5" y2="996.5"/>
+			<line id="l906" class="s2" x1="885.5" y1="996.5" x2="885.5" y2="1096.046875"/>
+			<line id="l907" class="s2" x1="1015.5" y1="896.046875" x2="1015.5" y2="996.5"/>
+			<line id="l908" class="s2" x1="1525.5" y1="896.046875" x2="1525.5" y2="996.5"/>
+			<line id="l909" class="s2" x1="1775.5" y1="896.046875" x2="1775.5" y2="996.5"/>
+			<line id="l910" class="s2" x1="1865.5" y1="996.5" x2="1865.5" y2="1182.890625"/>
+			<line id="l911" class="s2" x1="1955.5" y1="896.046875" x2="1955.5" y2="996.5"/>
+			<line id="l912" class="s2" x1="2205.5" y1="896.046875" x2="2205.5" y2="1342.5"/>
+			<line id="l913" class="s2" x1="2725.5" y1="896.046875" x2="2725.5" y2="1296.859375"/>
+			<line id="l914" class="s2" x1="3159.5" y1="896.046875" x2="3159.5" y2="996.5"/>
+			<line id="l915" class="s2" x1="3377.5" y1="996.5" x2="3377.5" y2="1215.859375"/>
+			<line id="l916" class="s2" x1="3595.5" y1="896.046875" x2="3595.5" y2="996.5"/>
+			<line id="l917" class="s2" x1="3159.5" y1="996.5" x2="3595.5" y2="996.5"/>
+			<line id="l918" class="s2" x1="1775.5" y1="996.5" x2="1955.5" y2="996.5"/>
+			<line id="l919" class="s2" x1="245.5" y1="996.5" x2="1525.5" y2="996.5"/>
+			<line id="l920" class="s2" x1="75.5" y1="474.75" x2="75.5" y2="574.5"/>
+			<line id="l921" class="s2" x1="245.5" y1="574.5" x2="245.5" y2="724.203125"/>
+			<line id="l922" class="s2" x1="415.5" y1="474.75" x2="415.5" y2="574.5"/>
+			<line id="l923" class="s2" x1="845.5" y1="474.75" x2="845.5" y2="574.5"/>
+			<line id="l924" class="s2" x1="1015.5" y1="574.5" x2="1015.5" y2="674.75"/>
+			<line id="l925" class="s2" x1="1185.5" y1="474.75" x2="1185.5" y2="574.5"/>
+			<line id="l926" class="s2" x1="1435.5" y1="474.75" x2="1435.5" y2="574.5"/>
+			<line id="l927" class="s2" x1="1525.5" y1="574.5" x2="1525.5" y2="707.71875"/>
+			<line id="l928" class="s2" x1="1615.5" y1="474.75" x2="1615.5" y2="574.5"/>
+			<line id="l929" class="s2" x1="2977.5" y1="474.75" x2="2977.5" y2="608.5"/>
+			<line id="l930" class="s2" x1="3069.5" y1="608.5" x2="3069.5" y2="852.5"/>
+			<line id="l931" class="s2" x1="3155.5" y1="474.75" x2="3155.5" y2="608.5"/>
+			<line id="l932" class="s2" x1="3164.5" y1="540.5" x2="3164.5" y2="809.625"/>
+			<line id="l933" class="s2" x1="3339.5" y1="540.5" x2="3339.5" y2="814.046875"/>
+			<line id="l934" class="s2" x1="3342.5" y1="474.75" x2="3342.5" y2="540.5"/>
+			<line id="l935" class="s2" x1="3595.5" y1="474.75" x2="3595.5" y2="724.203125"/>
+			<line id="l936" class="s2" x1="3164.5" y1="540.5" x2="3342.5" y2="540.5"/>
+			<line id="l937" class="s2" x1="2977.5" y1="608.5" x2="3155.5" y2="608.5"/>
+			<line id="l938" class="s2" x1="1435.5" y1="574.5" x2="1615.5" y2="574.5"/>
+			<line id="l939" class="s2" x1="845.5" y1="574.5" x2="1185.5" y2="574.5"/>
+			<line id="l940" class="s2" x1="75.5" y1="574.5" x2="415.5" y2="574.5"/>
+			<line id="l941" class="s2" x1="75.5" y1="86.421875" x2="75.5" y2="302.90625"/>
+			<line id="l942" class="s2" x1="325.5" y1="86.421875" x2="325.5" y2="186.5"/>
+			<line id="l943" class="s2" x1="415.5" y1="186.5" x2="415.5" y2="302.90625"/>
+			<line id="l944" class="s2" x1="505.5" y1="86.421875" x2="505.5" y2="186.5"/>
+			<line id="l945" class="s2" x1="755.5" y1="86.421875" x2="755.5" y2="186.5"/>
+			<line id="l946" class="s2" x1="845.5" y1="186.5" x2="845.5" y2="302.90625"/>
+			<line id="l947" class="s2" x1="935.5" y1="86.421875" x2="935.5" y2="186.5"/>
+			<line id="l948" class="s2" x1="1185.5" y1="86.421875" x2="1185.5" y2="286.421875"/>
+			<line id="l949" class="s2" x1="755.5" y1="186.5" x2="935.5" y2="186.5"/>
+			<line id="l950" class="s2" x1="325.5" y1="186.5" x2="505.5" y2="186.5"/>
+		</g>
+		<g id="g5">
+			<g id="g6" transform="translate(0,2475.328125)">
+				<g id="g7" transform="translate(2200.23828125,0)">
+					<g id="g8">
+						<g id="g9">
+							<g id="g10">
+								<g id="g12" transform="translate(0.384765625,0)" at:id="94" class="s3" onclick="nodeclick(94)">
+									<g id="g213" clip-path="url(#g225)">
+										<rect id="r214" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i217" xlink:href="Mayraments.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t216" transform="translate(3,3)">
+											<text id="ts218" x="80.58203125" y="11.484375" class="s5">Майраменц</text>
+											<text id="ts219" x="98.611328125" y="27.96875" class="s5">Сона</text>
+											<text id="ts220" x="96.6015625" y="44.453125" class="s5">(1856</text>
+											<text id="ts221" x="109.8203125" y="60.9375" class="s5">-</text>
+											<text id="ts222" x="106.861328125" y="77.421875" class="s5">?)</text>
+										</g>
+										<polygon id="p215" class="s6" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r223" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g225">
+											<rect id="r226" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g11" transform="translate(0,85.421875)" at:id="93" class="s3" onclick="nodeclick(93)">
+									<g id="g201">
+										<rect id="r202" class="s9" x="0.5" y="0.5" width="149.76953125" height="101.90625"/>
+										<image id="i205" xlink:href="Mayraments.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t204" transform="translate(3,3)">
+											<text id="ts206" x="80.966796875" y="11.484375" class="s5">Майраменц</text>
+											<text id="ts207" x="89.814453125" y="27.96875" class="s5">Карапет</text>
+											<text id="ts208" x="96.986328125" y="44.453125" class="s5">(1846</text>
+											<text id="ts209" x="110.205078125" y="60.9375" class="s5">-</text>
+											<text id="ts210" x="107.24609375" y="77.421875" class="s5">?)</text>
+											<text id="ts211" x="80" y="93.90625" class="s10">Майраменц</text>
+										</g>
+										<polygon id="p203" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r212" class="s7" x="0.5" y="0.5" width="149.76953125" height="101.90625"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g13" transform="translate(0,2037.546875)">
+				<g id="g14" transform="translate(1510.98828125,0)">
+					<g id="g15">
+						<g id="g16">
+							<g id="g17">
+								<g id="g18" transform="translate(0,101.90625)" at:id="92" class="s3" onclick="nodeclick(92)">
+									<g id="g227" clip-path="url(#g242)">
+										<rect id="r228" class="s4" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+										<image id="i231" xlink:href="Mayraments.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t230" transform="translate(3,3)">
+											<text id="ts232" x="93.576171875" y="11.484375" class="s5">Авакова</text>
+											<text id="ts233" x="80" y="27.96875" class="s5">(Майраменц)</text>
+											<text id="ts234" x="93.599609375" y="44.453125" class="s5">Ханзаде</text>
+											<text id="ts235" x="80.509765625" y="60.9375" class="s5">Карапетовна</text>
+											<text id="ts236" x="100.61328125" y="77.421875" class="s5">(1877</text>
+											<text id="ts237" x="113.83203125" y="93.90625" class="s5">-</text>
+											<text id="ts238" x="110.873046875" y="110.390625" class="s5">?)</text>
+											<text id="ts239" x="83.626953125" y="126.875" class="s10">Майраменц</text>
+										</g>
+										<polygon id="p229" class="s6" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r240" class="s7" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g242">
+											<rect id="r243" class="s8" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g19" transform="translate(4.01171875,0)" at:id="179" class="s3" onclick="nodeclick(179)">
+									<g id="g244">
+										<rect id="r245" class="s11" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i248" xlink:href="Mayraments.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t247" transform="translate(3,3)">
+											<text id="ts249" x="92.7138671875" y="11.484375" class="s5">Аваков</text>
+											<text id="ts250" x="92.458984375" y="27.96875" class="s5">Аракел</text>
+											<text id="ts251" x="96.6015625" y="44.453125" class="s5">(1874</text>
+											<text id="ts252" x="109.8203125" y="60.9375" class="s5">-</text>
+											<text id="ts253" x="106.861328125" y="77.421875" class="s5">?)</text>
+											<text id="ts254" x="87.84375" y="93.90625" class="s10">Аваковы</text>
+										</g>
+										<polygon id="p246" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r255" class="s7" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g20" transform="translate(1371.24633789063,0)">
+						<g id="g21">
+							<g id="g22">
+								<g id="g23" transform="translate(0,101.90625)" at:id="95" class="s3" onclick="nodeclick(95)">
+									<g id="g256" clip-path="url(#g271)">
+										<rect id="r257" class="s4" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+										<image id="i260" xlink:href="Mayraments.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t259" transform="translate(3,3)">
+											<text id="ts261" x="90.6611328125" y="11.484375" class="s5">Григорян</text>
+											<text id="ts262" x="80" y="27.96875" class="s5">(Майраменц)</text>
+											<text id="ts263" x="95.5390625" y="44.453125" class="s5">Олинка</text>
+											<text id="ts264" x="80.509765625" y="60.9375" class="s5">Карапетовна</text>
+											<text id="ts265" x="100.61328125" y="77.421875" class="s5">(1886</text>
+											<text id="ts266" x="113.83203125" y="93.90625" class="s5">-</text>
+											<text id="ts267" x="110.873046875" y="110.390625" class="s5">?)</text>
+											<text id="ts268" x="83.626953125" y="126.875" class="s10">Майраменц</text>
+										</g>
+										<polygon id="p258" class="s6" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r269" class="s7" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g271">
+											<rect id="r272" class="s8" x="0.5" y="0.5" width="157.0234375" height="134.875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g24" transform="translate(4.01171875,0)" at:id="180" class="s3" onclick="nodeclick(180)">
+									<g id="g273">
+										<rect id="r274" class="s11" x="0.5" y="0.5" width="149" height="101.90625"/>
+										<image id="i277" xlink:href="Mayraments.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t276" transform="translate(3,3)">
+											<text id="ts278" x="86.6494140625" y="11.484375" class="s5">Григорян</text>
+											<text id="ts279" x="93.0302734375" y="27.96875" class="s5">Костан</text>
+											<text id="ts280" x="96.6015625" y="44.453125" class="s5">(1879</text>
+											<text id="ts281" x="109.8203125" y="60.9375" class="s5">-</text>
+											<text id="ts282" x="106.861328125" y="77.421875" class="s5">?)</text>
+											<text id="ts283" x="81.78125" y="93.90625" class="s10">Григоряны</text>
+										</g>
+										<polygon id="p275" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r284" class="s7" x="0.5" y="0.5" width="149" height="101.90625"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g25" transform="translate(0,1583.28125)">
+				<g id="g26" transform="translate(1515,0)">
+					<g id="g27">
+						<g id="g28">
+							<g id="g29">
+								<g id="g30" transform="translate(0,134.875)" at:id="84" class="s3" onclick="nodeclick(84)">
+									<g id="g285">
+										<rect id="r286" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i289" xlink:href="Mayraments.html.files/io43.JPG" x="1" y="1" width="67.2268905639648" height="80" preserveAspectRatio="none"/>
+										<g id="t288" transform="translate(3,3)">
+											<text id="ts290" x="86.3273162841797" y="11.484375" class="s5">Аваков</text>
+											<text id="ts291" x="86.3771209716797" y="27.96875" class="s5">Еранос</text>
+											<text id="ts292" x="73.0294570922852" y="44.453125" class="s5">Аракелович</text>
+											<text id="ts293" x="90.2150115966797" y="60.9375" class="s5">(1907</text>
+											<text id="ts294" x="103.43376159668" y="77.421875" class="s5">-</text>
+											<text id="ts295" x="90.2150115966797" y="93.90625" class="s5">1945)</text>
+											<text id="ts296" x="81.4571990966797" y="110.390625" class="s10">Аваковы</text>
+										</g>
+										<polygon id="p287" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r297" class="s7" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+								<g id="g31" at:id="85" class="s3" onclick="nodeclick(85)">
+									<g id="g298" clip-path="url(#g313)">
+										<rect id="r299" class="s4" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										<image id="i302" xlink:href="Mayraments.html.files/io103.jpg" x="1" y="1" width="62.2568092346191" height="80" preserveAspectRatio="none"/>
+										<g id="t301" transform="translate(3,3)">
+											<text id="ts303" x="80.6928558349609" y="11.484375" class="s5">Авакова</text>
+											<text id="ts304" x="65.4848480224609" y="27.96875" class="s5">(Агаджанова)</text>
+											<text id="ts305" x="81.0414886474609" y="44.453125" class="s5">Евгения</text>
+											<text id="ts306" x="73.6674652099609" y="60.9375" class="s5">Оскановна</text>
+											<text id="ts307" x="70.9955902099609" y="77.421875" class="s5">(18.02.1918</text>
+											<text id="ts308" x="100.948715209961" y="93.90625" class="s5">-</text>
+											<text id="ts309" x="70.9955902099609" y="110.390625" class="s5">06.10.1995)</text>
+											<text id="ts310" x="68.3588714599609" y="126.875" class="s10">Агаджановы</text>
+										</g>
+										<polygon id="p300" class="s6" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r311" class="s7" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g313">
+											<rect id="r314" class="s8" x="0.5" y="0.5" width="149" height="134.875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g143" transform="translate(2886.24633789063,49.453125)">
+					<g id="g144">
+						<g id="g145">
+							<g id="g146">
+								<g id="g147" transform="translate(0,85.421875)" at:id="96" class="s3" onclick="nodeclick(96)">
+									<g id="g315">
+										<rect id="r316" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i319" xlink:href="Mayraments.html.files/io51.JPG" x="1" y="1" width="59.2592582702637" height="80" preserveAspectRatio="none"/>
+										<g id="t318" transform="translate(3,3)">
+											<text id="ts320" x="76.2790374755859" y="11.484375" class="s5">Григорян</text>
+											<text id="ts321" x="82.8239593505859" y="27.96875" class="s5">Григор</text>
+											<text id="ts322" x="69.6169281005859" y="44.453125" class="s5">Костанович</text>
+											<text id="ts323" x="69.4968109130859" y="60.9375" class="s5">(25.05.1925</text>
+											<text id="ts324" x="99.4499359130859" y="77.421875" class="s5">-</text>
+											<text id="ts325" x="96.4909515380859" y="93.90625" class="s5">?)</text>
+											<text id="ts326" x="71.4108734130859" y="110.390625" class="s10">Григоряны</text>
+										</g>
+										<polygon id="p317" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r327" class="s7" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+								<g id="g148" at:id="97" class="s3" onclick="nodeclick(97)">
+									<g id="g328" clip-path="url(#g340)">
+										<rect id="r329" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i332" xlink:href="Mayraments.html.files/io52.jpg" x="1" y="1" width="63.4920654296875" height="80" preserveAspectRatio="none"/>
+										<g id="t331" transform="translate(3,3)">
+											<text id="ts333" x="78.3954467773438" y="11.484375" class="s5">Григорян</text>
+											<text id="ts334" x="83.6454467773438" y="27.96875" class="s5">Тамара</text>
+											<text id="ts335" x="71.6132202148438" y="44.453125" class="s5">(26.12.1928</text>
+											<text id="ts336" x="101.566345214844" y="60.9375" class="s5">-</text>
+											<text id="ts337" x="98.6073608398438" y="77.421875" class="s5">?)</text>
+										</g>
+										<polygon id="p330" class="s6" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r338" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g340">
+											<rect id="r341" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g32" transform="translate(0,1096.046875)">
+				<g id="g33" transform="translate(810,0)">
+					<g id="g34">
+						<g id="g35">
+							<g id="g36">
+								<g id="g37" transform="translate(0,118.390617370605)" at:id="83" class="s3" onclick="nodeclick(83)">
+									<g id="g342" clip-path="url(#g359)">
+										<rect id="r343" class="s4" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+										<image id="i346" xlink:href="Mayraments.html.files/io42.JPG" x="1" y="1" width="64.7773284912109" height="80" preserveAspectRatio="none"/>
+										<g id="t345" transform="translate(3,3)">
+											<text id="ts347" x="78.6689376831055" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts348" x="77.3593673706055" y="27.96875" class="s5">(Авакова)</text>
+											<text id="ts349" x="91.1288986206055" y="44.453125" class="s5">Седа</text>
+											<text id="ts350" x="72.2206954956055" y="60.9375" class="s5">Ераносовна</text>
+											<text id="ts351" x="72.2558517456055" y="77.421875" class="s5">(01.05.1937</text>
+											<text id="ts352" x="94.2958908081055" y="93.90625" class="s5">или</text>
+											<text id="ts353" x="74.5527267456055" y="110.390625" class="s5">12.06.1936</text>
+											<text id="ts354" x="102.208976745605" y="126.875" class="s5">-</text>
+											<text id="ts355" x="72.2558517456055" y="143.359375" class="s5">16.05.2021)</text>
+											<text id="ts356" x="80.2324142456055" y="159.84375" class="s10">Аваковы</text>
+										</g>
+										<polygon id="p344" class="s6" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r357" class="s7" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g359">
+											<rect id="r360" class="s8" x="0.5" y="0.5" width="149" height="167.84375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g38" at:id="82" class="s3" onclick="nodeclick(82)">
+									<g id="g361">
+										<rect id="r362" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i365" xlink:href="Mayraments.html.files/io41.JPG" x="1" y="1" width="57.9710159301758" height="80" preserveAspectRatio="none"/>
+										<g id="t364" transform="translate(3,3)">
+											<text id="ts366" x="75.2657775878906" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts367" x="81.2276916503906" y="27.96875" class="s5">Матеос</text>
+											<text id="ts368" x="62.9464492797852" y="44.453125" class="s5">Меружанович</text>
+											<text id="ts369" x="68.8526916503906" y="60.9375" class="s5">(01.08.1928</text>
+											<text id="ts370" x="98.8058166503906" y="77.421875" class="s5">-</text>
+											<text id="ts371" x="68.8526916503906" y="93.90625" class="s5">05.07.1968)</text>
+											<text id="ts372" x="70.3956604003906" y="110.390625" class="s10">Азнауряны</text>
+										</g>
+										<polygon id="p363" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r373" class="s7" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g39" transform="translate(980,86.84375)">
+						<g id="g40">
+							<g id="g41">
+								<g id="g42" transform="translate(0,81)" at:id="88" class="s3" onclick="nodeclick(88)">
+									<g id="g374">
+										<rect id="r375" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i378" xlink:href="Mayraments.html.files/io47.JPG" x="1" y="1" width="67.2268905639648" height="80" preserveAspectRatio="none"/>
+										<g id="t377" transform="translate(3,3)">
+											<text id="ts379" x="86.3273162841797" y="11.484375" class="s5">Аваков</text>
+											<text id="ts380" x="85.8644256591797" y="27.96875" class="s5">Эдуард</text>
+											<text id="ts381" x="73.3341445922852" y="44.453125" class="s5">Ераносович</text>
+											<text id="ts382" x="73.4806289672852" y="60.9375" class="s5">(28.02.1939</text>
+											<text id="ts383" x="103.43376159668" y="77.421875" class="s5">-</text>
+											<text id="ts384" x="73.4806289672852" y="93.90625" class="s5">20.04.2024)</text>
+											<text id="ts385" x="81.4571990966797" y="110.390625" class="s10">Аваковы</text>
+										</g>
+										<polygon id="p376" class="s6" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r386" class="s7" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+								<g id="g43" at:id="89" class="s3" onclick="nodeclick(89)">
+									<g id="g387" clip-path="url(#g397)">
+										<rect id="r388" class="s4" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i390" xlink:href="Mayraments.html.files/io48.JPG" x="1" y="1" width="71.1111145019531" height="80" preserveAspectRatio="none"/>
+										<g id="t389" transform="translate(3,3)">
+											<text id="ts391" x="85.1200103759766" y="11.484375" class="s5">Авакова</text>
+											<text id="ts392" x="87.7245025634766" y="27.96875" class="s5">Лариса</text>
+											<text id="ts393" x="81.9735260009766" y="44.453125" class="s5">Габоевна</text>
+											<text id="ts394" x="73.1258697509766" y="60.9375" class="s5">(10.02.1948)</text>
+										</g>
+									</g>
+									<rect id="r395" class="s7" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g397">
+											<rect id="r398" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g44" transform="translate(1230,200.8125)">
+						<g id="g45">
+							<g id="g48" transform="translate(0,4.421875)">
+								<g id="g49" at:id="248" class="s3" onclick="nodeclick(248)">
+									<g id="g399">
+										<rect id="r400" class="s11" x="0.5" y="0.5" width="149" height="81"/>
+										<image id="i402" xlink:href="Mayraments.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t401" transform="translate(3,3)">
+											<text id="ts403" x="106.55078125" y="11.484375" class="s5">...</text>
+											<text id="ts404" x="87.94140625" y="27.96875" class="s10">Власовы</text>
+										</g>
+									</g>
+									<rect id="r405" class="s7" x="0.5" y="0.5" width="149" height="81"/>
+								</g>
+							</g>
+							<g id="g46" transform="translate(180,0)">
+								<g id="g47" at:id="86" class="s3" onclick="nodeclick(86)">
+									<g id="g406" clip-path="url(#g417)">
+										<rect id="r407" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i409" xlink:href="Mayraments.html.files/io45.jpg" x="1" y="1" width="65.3061218261719" height="80" preserveAspectRatio="none"/>
+										<g id="t408" transform="translate(3,3)">
+											<text id="ts410" x="82.2175140380859" y="11.484375" class="s5">Авакова</text>
+											<text id="ts411" x="87.3093109130859" y="27.96875" class="s5">Лидия</text>
+											<text id="ts412" x="72.4850921630859" y="44.453125" class="s5">Ераносовна</text>
+											<text id="ts413" x="70.2233734130859" y="60.9375" class="s5">(18.09.1941)</text>
+											<text id="ts414" x="80.4968109130859" y="77.421875" class="s10">Аваковы</text>
+										</g>
+									</g>
+									<rect id="r415" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g417">
+											<rect id="r418" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g149" transform="translate(2470,119.8125)">
+					<g id="g150">
+						<g id="g151">
+							<g id="g152">
+								<g id="g153" transform="translate(0,81)" at:id="98" class="s3" onclick="nodeclick(98)">
+									<g id="g419" clip-path="url(#g430)">
+										<rect id="r420" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i422" xlink:href="Mayraments.html.files/io53.JPG" x="1" y="1" width="60.1503753662109" height="80" preserveAspectRatio="none"/>
+										<g id="t421" transform="translate(3,3)">
+											<text id="ts423" x="72.1308517456055" y="11.484375" class="s5">(Григорян)</text>
+											<text id="ts424" x="81.6025314331055" y="27.96875" class="s5">Олинка</text>
+											<text id="ts425" x="70.3378829956055" y="44.453125" class="s5">Григоровна</text>
+											<text id="ts426" x="67.6455001831055" y="60.9375" class="s5">(20.10.1955)</text>
+											<text id="ts427" x="71.8564376831055" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r428" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g430">
+											<rect id="r431" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g154" at:id="99" class="s3" onclick="nodeclick(99)">
+									<g id="g432">
+										<rect id="r433" class="s11" x="0.5" y="0.5" width="149" height="81"/>
+										<image id="i435" xlink:href="Mayraments.html.files/io54.JPG" x="1" y="1" width="69.5652160644531" height="80" preserveAspectRatio="none"/>
+										<g id="t434" transform="translate(3,3)">
+											<text id="ts436" x="91.6849517822266" y="11.484375" class="s5">Гагик</text>
+											<text id="ts437" x="72.3529205322266" y="27.96875" class="s5">(16.07.1951)</text>
+										</g>
+									</g>
+									<rect id="r438" class="s7" x="0.5" y="0.5" width="149" height="81"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g155" transform="translate(180,81)">
+						<g id="g156">
+							<g id="g157">
+								<g id="g158" at:id="101" class="s3" onclick="nodeclick(101)">
+									<g id="g439">
+										<rect id="r440" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i442" xlink:href="Mayraments.html.files/io56.JPG" x="1" y="1" width="64.5161285400391" height="80" preserveAspectRatio="none"/>
+										<g id="t441" transform="translate(3,3)">
+											<text id="ts443" x="78.9074783325195" y="11.484375" class="s5">Григорян</text>
+											<text id="ts444" x="80.3576736450195" y="27.96875" class="s5">Варужан</text>
+											<text id="ts445" x="72.4094314575195" y="44.453125" class="s5">Григорович</text>
+											<text id="ts446" x="69.8283767700195" y="60.9375" class="s5">(17.02.1960)</text>
+											<text id="ts447" x="74.0393142700195" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r448" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g159" transform="translate(832.49267578125,0)">
+						<g id="g160">
+							<g id="g161">
+								<g id="g162" transform="translate(0,81)" at:id="100" class="s3" onclick="nodeclick(100)">
+									<g id="g449">
+										<rect id="r450" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i452" xlink:href="Mayraments.html.files/io55.jpg" x="1" y="1" width="59.9250946044922" height="80" preserveAspectRatio="none"/>
+										<g id="t451" transform="translate(3,3)">
+											<text id="ts453" x="76.6119613647461" y="11.484375" class="s5">Григорян</text>
+											<text id="ts454" x="75.3805160522461" y="27.96875" class="s5">Андраник</text>
+											<text id="ts455" x="70.1139144897461" y="44.453125" class="s5">Григорович</text>
+											<text id="ts456" x="67.5328598022461" y="60.9375" class="s5">(04.11.1963)</text>
+											<text id="ts457" x="71.7437973022461" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r458" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g163" at:id="102" class="s3" onclick="nodeclick(102)">
+									<g id="g459" clip-path="url(#g469)">
+										<rect id="r460" class="s4" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i462" xlink:href="Mayraments.html.files/io57.jpg" x="1" y="1" width="65.3807144165039" height="80" preserveAspectRatio="none"/>
+										<g id="t461" transform="translate(3,3)">
+											<text id="ts463" x="79.3397674560547" y="11.484375" class="s5">Григорян</text>
+											<text id="ts464" x="81.4462127685547" y="27.96875" class="s5">Арпеник</text>
+											<text id="ts465" x="79.1698455810547" y="44.453125" class="s5">Усиковна</text>
+											<text id="ts466" x="70.2606735229492" y="60.9375" class="s5">(06.08.1956)</text>
+										</g>
+									</g>
+									<rect id="r467" class="s7" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g469">
+											<rect id="r470" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g50" transform="translate(0,674.75)">
+				<g id="g51" transform="translate(170,0)">
+					<g id="g52" transform="translate(0,49.453125)">
+						<g id="g53">
+							<g id="g54">
+								<g id="g55" transform="translate(0,85.421875)" at:id="118" class="s3" onclick="nodeclick(118)">
+									<g id="g471" clip-path="url(#g482)">
+										<rect id="r472" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i474" xlink:href="Mayraments.html.files/io65.jpg" x="1" y="1" width="65.3807144165039" height="80" preserveAspectRatio="none"/>
+										<g id="t473" transform="translate(3,3)">
+											<text id="ts475" x="78.9706268310547" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts476" x="87.1005096435547" y="27.96875" class="s5">Софья</text>
+											<text id="ts477" x="72.0009078979492" y="44.453125" class="s5">Матеосовна</text>
+											<text id="ts478" x="70.2606735229492" y="60.9375" class="s5">(03.07.1959)</text>
+											<text id="ts479" x="74.1005096435547" y="77.421875" class="s10">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r480" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g482">
+											<rect id="r483" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g56" at:id="119" class="s3" onclick="nodeclick(119)">
+									<g id="g484">
+										<rect id="r485" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i487" xlink:href="Mayraments.html.files/io66.jpg" x="1" y="1" width="66.1156997680664" height="80" preserveAspectRatio="none"/>
+										<g id="t486" transform="translate(3,3)">
+											<text id="ts488" x="79.0422210693359" y="11.484375" class="s5">Степанян</text>
+											<text id="ts489" x="89.9601898193359" y="27.96875" class="s5">Гагик</text>
+											<text id="ts490" x="75.3303070068359" y="44.453125" class="s5">Смбатович</text>
+											<text id="ts491" x="70.6281661987305" y="60.9375" class="s5">(27.05.1950)</text>
+											<text id="ts492" x="74.1730804443359" y="77.421875" class="s10">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r493" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g57" transform="translate(770,0)">
+						<g id="g58">
+							<g id="g59">
+								<g id="g60" transform="translate(0,118.390617370605)" at:id="130" class="s3" onclick="nodeclick(130)">
+									<g id="g494" clip-path="url(#g506)">
+										<rect id="r495" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i497" xlink:href="Mayraments.html.files/io76.jpg" x="1" y="1" width="58.1818199157715" height="80" preserveAspectRatio="none"/>
+										<g id="t496" transform="translate(3,3)">
+											<text id="ts498" x="75.0723571777344" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts499" x="70.7774353027344" y="27.96875" class="s5">(Азнаурян)</text>
+											<text id="ts500" x="81.1016540527344" y="44.453125" class="s5">Карина</text>
+											<text id="ts501" x="68.4248962402344" y="60.9375" class="s5">Матеозовна</text>
+											<text id="ts502" x="66.6612243652344" y="77.421875" class="s5">(04.10.1961)</text>
+											<text id="ts503" x="70.5010681152344" y="93.90625" class="s10">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r504" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g506">
+											<rect id="r507" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g61" at:id="131" class="s3" onclick="nodeclick(131)">
+									<g id="g508">
+										<rect id="r509" class="s11" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+										<image id="i511" xlink:href="Mayraments.html.files/io77.jpg" x="1" y="1" width="54.7945213317871" height="80" preserveAspectRatio="none"/>
+										<g id="t510" transform="translate(3,3)">
+											<text id="ts512" x="73.3787078857422" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts513" x="81.0222625732422" y="27.96875" class="s5">Гурген</text>
+											<text id="ts514" x="65.7058563232422" y="44.453125" class="s5">Мартинович</text>
+											<text id="ts515" x="67.2644500732422" y="60.9375" class="s5">(26.04.1958</text>
+											<text id="ts516" x="89.3044891357422" y="77.421875" class="s5">или</text>
+											<text id="ts517" x="67.2644500732422" y="93.90625" class="s5">01.05.1958)</text>
+											<text id="ts518" x="68.5105438232422" y="110.390625" class="s10">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r519" class="s7" x="0.5" y="0.5" width="149" height="118.390617370605"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g62" transform="translate(1280,32.96875)">
+						<g id="g63">
+							<g id="g64">
+								<g id="g65" transform="translate(0,101.90625)" at:id="147" class="s3" onclick="nodeclick(147)">
+									<g id="g520">
+										<rect id="r521" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i523" xlink:href="Mayraments.html.files/io94.jpg" x="1" y="1" width="63.4920654296875" height="80" preserveAspectRatio="none"/>
+										<g id="t522" transform="translate(3,3)">
+											<text id="ts524" x="78.0263061523438" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts525" x="78.7499389648438" y="27.96875" class="s5">Меружан</text>
+											<text id="ts526" x="70.9686889648438" y="44.453125" class="s5">Матеозович</text>
+											<text id="ts527" x="69.3163452148438" y="60.9375" class="s5">(07.11.1967)</text>
+											<text id="ts528" x="73.1561889648438" y="77.421875" class="s10">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r529" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g66" at:id="148" class="s3" onclick="nodeclick(148)">
+									<g id="g530" clip-path="url(#g542)">
+										<rect id="r531" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i533" xlink:href="Mayraments.html.files/io95.jpg" x="1" y="1" width="53.691276550293" height="80" preserveAspectRatio="none"/>
+										<g id="t532" transform="translate(3,3)">
+											<text id="ts534" x="73.1259155273438" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts535" x="56.1952438354492" y="27.96875" class="s5">(Тер-Петросян)</text>
+											<text id="ts536" x="82.5155639648438" y="44.453125" class="s5">Луиза</text>
+											<text id="ts537" x="65.6932983398438" y="60.9375" class="s5">Самвеловна</text>
+											<text id="ts538" x="64.4159545898438" y="77.421875" class="s5">(04.12.1973)</text>
+											<text id="ts539" x="55.9198532104492" y="93.90625" class="s10">Тер-Петросяны</text>
+										</g>
+									</g>
+									<rect id="r540" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g542">
+											<rect id="r543" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g128" transform="translate(1700,32.96875)">
+					<g id="g129">
+						<g id="g130">
+							<g id="g131">
+								<g id="g132" transform="translate(0,85.421875)" at:id="90" class="s3" onclick="nodeclick(90)">
+									<g id="g544" clip-path="url(#g556)">
+										<rect id="r545" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i547" xlink:href="Mayraments.html.files/io49.JPG" x="1" y="1" width="67.5105514526367" height="80" preserveAspectRatio="none"/>
+										<g id="t546" transform="translate(3,3)">
+											<text id="ts548" x="82.5902404785156" y="11.484375" class="s5">Барнови</text>
+											<text id="ts549" x="78.7259826660156" y="27.96875" class="s5">(Авакова)</text>
+											<text id="ts550" x="92.3138732910156" y="44.453125" class="s5">Эрна</text>
+											<text id="ts551" x="73.0746078491211" y="60.9375" class="s5">Эдуардовна</text>
+											<text id="ts552" x="71.3255844116211" y="77.421875" class="s5">(20.12.1969)</text>
+											<text id="ts553" x="81.5990295410156" y="93.90625" class="s10">Аваковы</text>
+										</g>
+									</g>
+									<rect id="r554" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g556">
+											<rect id="r557" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g133" at:id="117" class="s3" onclick="nodeclick(117)">
+									<g id="g558">
+										<rect id="r559" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i561" xlink:href="Mayraments.html.files/io481.jpeg" x="1" y="1" width="58.3941612243652" height="80" preserveAspectRatio="none"/>
+										<g id="t560" transform="translate(3,3)">
+											<text id="ts562" x="78.0320434570313" y="11.484375" class="s5">Барнови</text>
+											<text id="ts563" x="81.1433715820313" y="27.96875" class="s5">Сандро</text>
+											<text id="ts564" x="71.8240356445313" y="44.453125" class="s5">Гурамович</text>
+											<text id="ts565" x="66.7673950195313" y="60.9375" class="s5">(14.11.1968)</text>
+											<text id="ts566" x="77.3201293945313" y="77.421875" class="s10">Барнови</text>
+										</g>
+									</g>
+									<rect id="r567" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g134" transform="translate(180,101.90625)">
+						<g id="g135">
+							<g id="g136">
+								<g id="g137" at:id="91" class="s3" onclick="nodeclick(91)">
+									<g id="g568">
+										<rect id="r569" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i571" xlink:href="Mayraments.html.files/io50.JPG" x="1" y="1" width="60.6060600280762" height="80" preserveAspectRatio="none"/>
+										<g id="t570" transform="translate(3,3)">
+											<text id="ts572" x="83.0168914794922" y="11.484375" class="s5">Аваков</text>
+											<text id="ts573" x="83.2834930419922" y="27.96875" class="s5">Эрнест</text>
+											<text id="ts574" x="69.5110321044922" y="44.453125" class="s5">Эдуардович</text>
+											<text id="ts575" x="67.8733367919922" y="60.9375" class="s5">(24.01.1972)</text>
+											<text id="ts576" x="78.1467742919922" y="77.421875" class="s10">Аваковы</text>
+										</g>
+									</g>
+									<rect id="r577" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g138" transform="translate(2130,134.875)">
+					<g id="g139">
+						<g id="g140">
+							<g id="g141">
+								<g id="g142" at:id="87" class="s3" onclick="nodeclick(87)">
+									<g id="g578">
+										<rect id="r579" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i581" xlink:href="Mayraments.html.files/io46.JPG" x="1" y="1" width="57.1428565979004" height="80" preserveAspectRatio="none"/>
+										<g id="t580" transform="translate(3,3)">
+											<text id="ts582" x="81.3819732666016" y="11.484375" class="s5">Власов</text>
+											<text id="ts583" x="81.1007232666016" y="27.96875" class="s5">Степан</text>
+											<text id="ts584" x="66.9386138916016" y="44.453125" class="s5">Леонидович</text>
+											<text id="ts585" x="66.1417388916016" y="60.9375" class="s5">(15.09.1972)</text>
+											<text id="ts586" x="76.5128326416016" y="77.421875" class="s10">Власовы</text>
+										</g>
+									</g>
+									<rect id="r587" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g164" transform="translate(2645.056640625,139.296875)">
+					<g id="g165">
+						<g id="g166">
+							<g id="g167">
+								<g id="g168" at:id="110" class="s3" onclick="nodeclick(110)">
+									<g id="g588">
+										<rect id="r589" class="s11" x="0.5" y="0.5" width="158.88671875" height="81"/>
+										<image id="i591" xlink:href="Mayraments.html.files/4.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t590" transform="translate(3,3)">
+											<text id="ts592" x="91.5927734375" y="11.484375" class="s5">Григорян</text>
+											<text id="ts593" x="100.236328125" y="27.96875" class="s5">Нарек</text>
+											<text id="ts594" x="80" y="44.453125" class="s5">Варужанович</text>
+											<text id="ts595" x="86.724609375" y="60.9375" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r596" class="s7" x="0.5" y="0.5" width="158.88671875" height="81"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g169" transform="translate(2904.943359375,49.453125)">
+					<g id="g170" transform="translate(0,68.9375)">
+						<g id="g171">
+							<g id="g176">
+								<g id="g177" at:id="104" class="s3" onclick="nodeclick(104)">
+									<g id="g597" clip-path="url(#g609)">
+										<rect id="r598" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i600" xlink:href="Mayraments.html.files/io59.JPG" x="1" y="1" width="62.0155029296875" height="80" preserveAspectRatio="none"/>
+										<g id="t599" transform="translate(3,3)">
+											<text id="ts601" x="77.6571655273438" y="11.484375" class="s5">Григорян</text>
+											<text id="ts602" x="70.0839233398438" y="27.96875" class="s5">(Татевосян)</text>
+											<text id="ts603" x="77.2177124023438" y="44.453125" class="s5">Кристина</text>
+											<text id="ts604" x="72.7938842773438" y="60.9375" class="s5">Арменовна</text>
+											<text id="ts605" x="68.5780639648438" y="77.421875" class="s5">(20.10.1989)</text>
+											<text id="ts606" x="69.8085327148438" y="93.90625" class="s10">Татевосяны</text>
+										</g>
+									</g>
+									<rect id="r607" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g609">
+											<rect id="r610" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g172" transform="translate(180,16.484375)">
+								<g id="g173" at:id="103" class="s3" onclick="nodeclick(103)">
+									<g id="g611">
+										<rect id="r612" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i614" xlink:href="Mayraments.html.files/io58.JPG" x="1" y="1" width="55.7491302490234" height="80" preserveAspectRatio="none"/>
+										<g id="t613" transform="translate(3,3)">
+											<text id="ts615" x="74.5239791870117" y="11.484375" class="s5">Григорян</text>
+											<text id="ts616" x="81.0689010620117" y="27.96875" class="s5">Григор</text>
+											<text id="ts617" x="60.2944869995117" y="44.453125" class="s5">Андраникович</text>
+											<text id="ts618" x="65.4448776245117" y="60.9375" class="s5">(20.02.1984)</text>
+											<text id="ts619" x="69.6558151245117" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r620" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g174" transform="translate(360,20.90625)">
+								<g id="g175" at:id="613" class="s3" onclick="nodeclick(613)">
+									<g id="g621" clip-path="url(#g628)">
+										<rect id="r622" class="s4" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										<image id="i624" xlink:href="Mayraments.html.files/3.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t623" transform="translate(3,3)">
+											<text id="ts625" x="83.83984375" y="11.484375" class="s5">Анастасия</text>
+										</g>
+									</g>
+									<rect id="r626" class="s7" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g628">
+											<rect id="r629" class="s8" x="0.5" y="0.5" width="149" height="81" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g178" transform="translate(615.0986328125,0)">
+						<g id="g179">
+							<g id="g180">
+								<g id="g181" transform="translate(0,85.421875)" at:id="107" class="s3" onclick="nodeclick(107)">
+									<g id="g630" clip-path="url(#g641)">
+										<rect id="r631" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i633" xlink:href="Mayraments.html.files/io62.jpg" x="1" y="1" width="62.5906753540039" height="80" preserveAspectRatio="none"/>
+										<g id="t632" transform="translate(3,3)">
+											<text id="ts634" x="77.9447479248047" y="11.484375" class="s5">Григорян</text>
+											<text id="ts635" x="86.5345916748047" y="27.96875" class="s5">Магда</text>
+											<text id="ts636" x="63.8265914916992" y="44.453125" class="s5">Андраниковна</text>
+											<text id="ts637" x="68.8656539916992" y="60.9375" class="s5">(12.04.1987)</text>
+											<text id="ts638" x="73.0765838623047" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r639" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g641">
+											<rect id="r642" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g182" at:id="108" class="s3" onclick="nodeclick(108)">
+									<g id="g643">
+										<rect id="r644" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i646" xlink:href="Mayraments.html.files/io63.JPG" x="1" y="1" width="54.5291481018066" height="80" preserveAspectRatio="none"/>
+										<g id="t645" transform="translate(3,3)">
+											<text id="ts647" x="78.8241424560547" y="11.484375" class="s5">Арамян</text>
+											<text id="ts648" x="85.3690643310547" y="27.96875" class="s5">Арам</text>
+											<text id="ts649" x="71.1688690185547" y="44.453125" class="s5">Гагикович</text>
+											<text id="ts650" x="64.8348846435547" y="60.9375" class="s5">(09.06.1986)</text>
+											<text id="ts651" x="73.9559783935547" y="77.421875" class="s10">Арамяны</text>
+										</g>
+									</g>
+									<rect id="r652" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g67" transform="translate(0,286.421875)">
+				<g id="g68" transform="translate(0,16.484375)">
+					<g id="g69">
+						<g id="g70">
+							<g id="g71">
+								<g id="g72" transform="translate(0,85.421875)" at:id="121" class="s3" onclick="nodeclick(121)">
+									<g id="g653">
+										<rect id="r654" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i656" xlink:href="Mayraments.html.files/io68.jpg" x="1" y="1" width="55.1724128723145" height="80" preserveAspectRatio="none"/>
+										<g id="t655" transform="translate(3,3)">
+											<text id="ts657" x="73.5705871582031" y="11.484375" class="s5">Степанян</text>
+											<text id="ts658" x="82.9016418457031" y="27.96875" class="s5">Смбат</text>
+											<text id="ts659" x="71.4905090332031" y="44.453125" class="s5">Гагикович</text>
+											<text id="ts660" x="65.1565246582031" y="60.9375" class="s5">(27.10.1987)</text>
+											<text id="ts661" x="68.7014465332031" y="77.421875" class="s10">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r662" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g73" at:id="122" class="s3" onclick="nodeclick(122)">
+									<g id="g663" clip-path="url(#g674)">
+										<rect id="r664" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i666" xlink:href="Mayraments.html.files/io473.jpg" x="1" y="1" width="63.7450256347656" height="80" preserveAspectRatio="none"/>
+										<g id="t665" transform="translate(3,3)">
+											<text id="ts667" x="76.6762237548828" y="11.484375" class="s5">Арутюнян</text>
+											<text id="ts668" x="84.1322784423828" y="27.96875" class="s5">Лусине</text>
+											<text id="ts669" x="74.9213409423828" y="44.453125" class="s5">Артуровна</text>
+											<text id="ts670" x="69.4428253173828" y="60.9375" class="s5">(28.11.1990)</text>
+											<text id="ts671" x="71.8061065673828" y="77.421875" class="s10">Арутюняны</text>
+										</g>
+									</g>
+									<rect id="r672" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g674">
+											<rect id="r675" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g74" transform="translate(337.5703125,0)">
+						<g id="g75">
+							<g id="g76">
+								<g id="g77" transform="translate(2.4296875,85.421875)" at:id="120" class="s3" onclick="nodeclick(120)">
+									<g id="g676">
+										<rect id="r677" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i679" xlink:href="Mayraments.html.files/io67.jpg" x="1" y="1" width="51.7799339294434" height="80" preserveAspectRatio="none"/>
+										<g id="t678" transform="translate(3,3)">
+											<text id="ts680" x="71.8743438720703" y="11.484375" class="s5">Степанян</text>
+											<text id="ts681" x="78.6712188720703" y="27.96875" class="s5">Тигран</text>
+											<text id="ts682" x="69.7942657470703" y="44.453125" class="s5">Гагикович</text>
+											<text id="ts683" x="63.460277557373" y="60.9375" class="s5">(23.11.1988)</text>
+											<text id="ts684" x="67.0052032470703" y="77.421875" class="s10">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r685" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g78" at:id="124" class="s3" onclick="nodeclick(124)">
+									<g id="g686" clip-path="url(#g697)">
+										<rect id="r687" class="s4" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										<image id="i689" xlink:href="Mayraments.html.files/io71.jpg" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t688" transform="translate(3,3)">
+											<text id="ts690" x="92.0849609375" y="11.484375" class="s5">Закарян</text>
+											<text id="ts691" x="97.3056640625" y="27.96875" class="s5">Лиана</text>
+											<text id="ts692" x="87.171875" y="44.453125" class="s5">Ашотовна</text>
+											<text id="ts693" x="80" y="60.9375" class="s5">(25.01.1990)</text>
+											<text id="ts694" x="87.21484375" y="77.421875" class="s10">Закаряны</text>
+										</g>
+									</g>
+									<rect id="r695" class="s7" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g697">
+											<rect id="r698" class="s8" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g94" transform="translate(770,0)">
+					<g id="g95" transform="translate(0,16.484375)">
+						<g id="g96">
+							<g id="g97">
+								<g id="g98" transform="translate(0,85.421875)" at:id="143" class="s3" onclick="nodeclick(143)">
+									<g id="g699" clip-path="url(#g710)">
+										<rect id="r700" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i702" xlink:href="Mayraments.html.files/io89.jpg" x="1" y="1" width="55.1724128723145" height="80" preserveAspectRatio="none"/>
+										<g id="t701" transform="translate(3,3)">
+											<text id="ts703" x="73.5676574707031" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts704" x="86.3264465332031" y="27.96875" class="s5">Седа</text>
+											<text id="ts705" x="68.2795715332031" y="44.453125" class="s5">Гургеновна</text>
+											<text id="ts706" x="65.1565246582031" y="60.9375" class="s5">(02.09.1983)</text>
+											<text id="ts707" x="68.6994934082031" y="77.421875" class="s10">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r708" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g710">
+											<rect id="r711" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+								<g id="g99" at:id="144" class="s3" onclick="nodeclick(144)">
+									<g id="g712">
+										<rect id="r713" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i715" xlink:href="Mayraments.html.files/io90.jpg" x="1" y="1" width="59.0405921936035" height="80" preserveAspectRatio="none"/>
+										<g id="t714" transform="translate(3,3)">
+											<text id="ts716" x="75.8181457519531" y="11.484375" class="s5">Хачатрян</text>
+											<text id="ts717" x="91.9021301269531" y="27.96875" class="s5">Гор</text>
+											<text id="ts718" x="74.1511535644531" y="44.453125" class="s5">Ашотович</text>
+											<text id="ts719" x="67.0906066894531" y="60.9375" class="s5">(03.05.1983)</text>
+											<text id="ts720" x="70.9499816894531" y="77.421875" class="s10">Хачатряны</text>
+										</g>
+									</g>
+									<rect id="r721" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g100" transform="translate(340,0)">
+						<g id="g101">
+							<g id="g102">
+								<g id="g103" transform="translate(0,101.90625)" at:id="132" class="s3" onclick="nodeclick(132)">
+									<g id="g722">
+										<rect id="r723" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i725" xlink:href="Mayraments.html.files/io78.jpg" x="1" y="1" width="58.2758636474609" height="80" preserveAspectRatio="none"/>
+										<g id="t724" transform="translate(3,3)">
+											<text id="ts726" x="75.1193771362305" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts727" x="80.8351974487305" y="27.96875" class="s5">Мартик</text>
+											<text id="ts728" x="69.7199630737305" y="44.453125" class="s5">Гургенович</text>
+											<text id="ts729" x="66.7082443237305" y="60.9375" class="s5">(23.12.1989)</text>
+											<text id="ts730" x="70.2512130737305" y="77.421875" class="s10">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r731" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+								<g id="g104" at:id="133" class="s3" onclick="nodeclick(133)">
+									<g id="g732" clip-path="url(#g744)">
+										<rect id="r733" class="s4" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										<image id="i735" xlink:href="Mayraments.html.files/io79.jpg" x="1" y="1" width="60" height="80" preserveAspectRatio="none"/>
+										<g id="t734" transform="translate(3,3)">
+											<text id="ts736" x="75.9814453125" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts737" x="74.66015625" y="27.96875" class="s5">(Давтьян)</text>
+											<text id="ts738" x="77.4111328125" y="44.453125" class="s5">Надежда</text>
+											<text id="ts739" x="70.5205078125" y="60.9375" class="s5">Георгиевна</text>
+											<text id="ts740" x="67.5703125" y="77.421875" class="s5">(05.11.1989)</text>
+											<text id="ts741" x="74.384765625" y="93.90625" class="s10">Давтьяны</text>
+										</g>
+									</g>
+									<rect id="r742" class="s7" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g744">
+											<rect id="r745" class="s8" x="0.5" y="0.5" width="149" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g119" transform="translate(1360,101.90625)">
+					<g id="g120">
+						<g id="g121">
+							<g id="g122">
+								<g id="g123" at:id="150" class="s3" onclick="nodeclick(150)">
+									<g id="g746">
+										<rect id="r747" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i749" xlink:href="Mayraments.html.files/io97.jpg" x="1" y="1" width="61.538459777832" height="80" preserveAspectRatio="none"/>
+										<g id="t748" transform="translate(3,3)">
+											<text id="ts750" x="77.0494995117188" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts751" x="83.0114135742188" y="27.96875" class="s5">Матеос</text>
+											<text id="ts752" x="64.7301712036133" y="44.453125" class="s5">Меружанович</text>
+											<text id="ts753" x="68.3395462036133" y="60.9375" class="s5">(11.06.1998)</text>
+											<text id="ts754" x="72.1793823242188" y="77.421875" class="s10">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r755" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g124" transform="translate(180,0)">
+						<g id="g125">
+							<g id="g126">
+								<g id="g127" at:id="149" class="s3" onclick="nodeclick(149)">
+									<g id="g756" clip-path="url(#g767)">
+										<rect id="r757" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i759" xlink:href="Mayraments.html.files/io96.jpg" x="1" y="1" width="60.1503753662109" height="80" preserveAspectRatio="none"/>
+										<g id="t758" transform="translate(3,3)">
+											<text id="ts760" x="76.3554611206055" y="11.484375" class="s5">Азнаурян</text>
+											<text id="ts761" x="79.9882736206055" y="27.96875" class="s5">Евгения</text>
+											<text id="ts762" x="64.1474533081055" y="44.453125" class="s5">Меружановна</text>
+											<text id="ts763" x="67.6455001831055" y="60.9375" class="s5">(04.04.2000)</text>
+											<text id="ts764" x="71.4853439331055" y="77.421875" class="s10">Азнауряны</text>
+										</g>
+									</g>
+									<rect id="r765" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g767">
+											<rect id="r768" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g183" transform="translate(2902.2744140625,101.90625)">
+					<g id="g184">
+						<g id="g185">
+							<g id="g186">
+								<g id="g187" at:id="105" class="s3" onclick="nodeclick(105)">
+									<g id="g769" clip-path="url(#g780)">
+										<rect id="r770" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i772" xlink:href="Mayraments.html.files/io60.JPG" x="1" y="1" width="59.793815612793" height="80" preserveAspectRatio="none"/>
+										<g id="t771" transform="translate(3,3)">
+											<text id="ts773" x="76.5463256835938" y="11.484375" class="s5">Григорян</text>
+											<text id="ts774" x="81.2455444335938" y="27.96875" class="s5">Оливия</text>
+											<text id="ts775" x="70.1596069335938" y="44.453125" class="s5">Григоровна</text>
+											<text id="ts776" x="67.4672164916992" y="60.9375" class="s5">(24.08.2015)</text>
+											<text id="ts777" x="71.6781616210938" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r778" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g780">
+											<rect id="r781" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g188" transform="translate(180,0)">
+						<g id="g189">
+							<g id="g190">
+								<g id="g191" at:id="106" class="s3" onclick="nodeclick(106)">
+									<g id="g782" clip-path="url(#g793)">
+										<rect id="r783" class="s4" x="0.5" y="0.5" width="151.908157348633" height="85.421875" rx="10" ry="10"/>
+										<image id="i785" xlink:href="Mayraments.html.files/io61.JPG" x="1" y="1" width="78.0487823486328" height="80" preserveAspectRatio="none"/>
+										<g id="t784" transform="translate(3,3)">
+											<text id="ts786" x="87.1278839111328" y="11.484375" class="s5">Григорян</text>
+											<text id="ts787" x="87.2187042236328" y="27.96875" class="s5">Беатриса</text>
+											<text id="ts788" x="80.7411651611328" y="44.453125" class="s5">Григоровна</text>
+											<text id="ts789" x="78.0487823486328" y="60.9375" class="s5">(11.09.2019)</text>
+											<text id="ts790" x="82.2597198486328" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r791" class="s7" x="0.5" y="0.5" width="151.908157348633" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g793">
+											<rect id="r794" class="s8" x="0.5" y="0.5" width="151.908157348633" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g192" transform="translate(362.908142089844,0)">
+						<g id="g193">
+							<g id="g194">
+								<g id="g195" at:id="612" class="s3" onclick="nodeclick(612)">
+									<g id="g795" clip-path="url(#g806)">
+										<rect id="r796" class="s4" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										<image id="i798" xlink:href="Mayraments.html.files/5.png" x="1" y="1" width="80" height="80" preserveAspectRatio="none"/>
+										<g id="t797" transform="translate(3,3)">
+											<text id="ts799" x="89.0791015625" y="11.484375" class="s5">Григорян</text>
+											<text id="ts800" x="84.4296875" y="27.96875" class="s5">Магдалина</text>
+											<text id="ts801" x="82.6923828125" y="44.453125" class="s5">Григоровна</text>
+											<text id="ts802" x="80" y="60.9375" class="s5">(18.12.2025)</text>
+											<text id="ts803" x="84.2109375" y="77.421875" class="s10">Григоряны</text>
+										</g>
+									</g>
+									<rect id="r804" class="s7" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g806">
+											<rect id="r807" class="s8" x="0.5" y="0.5" width="153.859375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g196" transform="translate(3520.0419921875,101.90625)">
+					<g id="g197">
+						<g id="g198">
+							<g id="g199">
+								<g id="g200" at:id="109" class="s3" onclick="nodeclick(109)">
+									<g id="g808">
+										<rect id="r809" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i811" xlink:href="Mayraments.html.files/io64.jpg" x="1" y="1" width="59.7014923095703" height="80" preserveAspectRatio="none"/>
+										<g id="t810" transform="translate(3,3)">
+											<text id="ts812" x="81.4103164672852" y="11.484375" class="s5">Арамян</text>
+											<text id="ts813" x="82.0050430297852" y="27.96875" class="s5">Ованес</text>
+											<text id="ts814" x="74.9122695922852" y="44.453125" class="s5">Арамович</text>
+											<text id="ts815" x="67.4210586547852" y="60.9375" class="s5">(03.11.2014)</text>
+											<text id="ts816" x="76.5421524047852" y="77.421875" class="s10">Арамяны</text>
+										</g>
+									</g>
+									<rect id="r817" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g79">
+				<g id="g80">
+					<g id="g81">
+						<g id="g82">
+							<g id="g83">
+								<g id="g84" at:id="123" class="s3" onclick="nodeclick(123)">
+									<g id="g818">
+										<rect id="r819" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i821" xlink:href="Mayraments.html.files/io70.jpeg" x="1" y="1" width="60.8365020751953" height="80" preserveAspectRatio="none"/>
+										<g id="t820" transform="translate(3,3)">
+											<text id="ts822" x="76.4026260375977" y="11.484375" class="s5">Степанян</text>
+											<text id="ts823" x="89.7151260375977" y="27.96875" class="s5">Авет</text>
+											<text id="ts824" x="72.6907119750977" y="44.453125" class="s5">Смбатович</text>
+											<text id="ts825" x="67.9885635375977" y="60.9375" class="s5">(10.06.2023)</text>
+											<text id="ts826" x="71.5334854125977" y="77.421875" class="s10">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r827" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g85" transform="translate(250,0)">
+					<g id="g86">
+						<g id="g87">
+							<g id="g88">
+								<g id="g89" at:id="125" class="s3" onclick="nodeclick(125)">
+									<g id="g828" clip-path="url(#g839)">
+										<rect id="r829" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i831" xlink:href="Mayraments.html.files/io72.jpeg" x="1" y="1" width="51.4685325622559" height="80" preserveAspectRatio="none"/>
+										<g id="t830" transform="translate(3,3)">
+											<text id="ts832" x="71.7186431884766" y="11.484375" class="s5">Степанян</text>
+											<text id="ts833" x="79.7664947509766" y="27.96875" class="s5">София</text>
+											<text id="ts834" x="65.5838775634766" y="44.453125" class="s5">Тиграновна</text>
+											<text id="ts835" x="63.3045768737793" y="60.9375" class="s5">(17.09.2015)</text>
+											<text id="ts836" x="66.8495025634766" y="77.421875" class="s10">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r837" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g839">
+											<rect id="r840" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g90" transform="translate(180,0)">
+						<g id="g91">
+							<g id="g92">
+								<g id="g93" at:id="126" class="s3" onclick="nodeclick(126)">
+									<g id="g841" clip-path="url(#g852)">
+										<rect id="r842" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i844" xlink:href="Mayraments.html.files/io73.jpeg" x="1" y="1" width="52.3809509277344" height="80" preserveAspectRatio="none"/>
+										<g id="t843" transform="translate(3,3)">
+											<text id="ts845" x="72.1748504638672" y="11.484375" class="s5">Степанян</text>
+											<text id="ts846" x="84.6875457763672" y="27.96875" class="s5">Анна</text>
+											<text id="ts847" x="66.0400848388672" y="44.453125" class="s5">Тиграновна</text>
+											<text id="ts848" x="63.7607879638672" y="60.9375" class="s5">(16.02.2018)</text>
+											<text id="ts849" x="67.3057098388672" y="77.421875" class="s10">Степаняны</text>
+										</g>
+									</g>
+									<rect id="r850" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g852">
+											<rect id="r853" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g105" transform="translate(680,0)">
+					<g id="g106">
+						<g id="g107">
+							<g id="g108">
+								<g id="g109" at:id="145" class="s3" onclick="nodeclick(145)">
+									<g id="g854">
+										<rect id="r855" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i857" xlink:href="Mayraments.html.files/io91.jpg" x="1" y="1" width="59.0405921936035" height="80" preserveAspectRatio="none"/>
+										<g id="t856" transform="translate(3,3)">
+											<text id="ts858" x="75.8181457519531" y="11.484375" class="s5">Хачатрян</text>
+											<text id="ts859" x="83.0779113769531" y="27.96875" class="s5">Баграт</text>
+											<text id="ts860" x="78.8591613769531" y="44.453125" class="s5">Горович</text>
+											<text id="ts861" x="67.0906066894531" y="60.9375" class="s5">(25.11.2017)</text>
+											<text id="ts862" x="70.9499816894531" y="77.421875" class="s10">Хачатряны</text>
+										</g>
+									</g>
+									<rect id="r863" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g110" transform="translate(180,0)">
+						<g id="g111">
+							<g id="g112">
+								<g id="g113" at:id="146" class="s3" onclick="nodeclick(146)">
+									<g id="g864" clip-path="url(#g875)">
+										<rect id="r865" class="s4" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										<image id="i867" xlink:href="Mayraments.html.files/io92.jpg" x="1" y="1" width="53.1561470031738" height="80" preserveAspectRatio="none"/>
+										<g id="t866" transform="translate(3,3)">
+											<text id="ts868" x="72.8759307861328" y="11.484375" class="s5">Хачатрян</text>
+											<text id="ts869" x="85.0751495361328" y="27.96875" class="s5">Анна</text>
+											<text id="ts870" x="76.0282745361328" y="44.453125" class="s5">Горовна</text>
+											<text id="ts871" x="64.1483917236328" y="60.9375" class="s5">(10.11.2020)</text>
+											<text id="ts872" x="68.0077667236328" y="77.421875" class="s10">Хачатряны</text>
+										</g>
+									</g>
+									<rect id="r873" class="s7" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g875">
+											<rect id="r876" class="s8" x="0.5" y="0.5" width="149" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g114" transform="translate(1110,0)">
+					<g id="g115">
+						<g id="g116">
+							<g id="g117">
+								<g id="g118" at:id="134" class="s3" onclick="nodeclick(134)">
+									<g id="g877">
+										<rect id="r878" class="s11" x="0.5" y="0.5" width="149" height="85.421875"/>
+										<image id="i880" xlink:href="Mayraments.html.files/io80.jpg" x="1" y="1" width="57.553955078125" height="80" preserveAspectRatio="none"/>
+										<g id="t879" transform="translate(3,3)">
+											<text id="ts881" x="74.7584228515625" y="11.484375" class="s5">Ваграмян</text>
+											<text id="ts882" x="83.6500244140625" y="27.96875" class="s5">Давид</text>
+											<text id="ts883" x="67.4752197265625" y="44.453125" class="s5">Мартикович</text>
+											<text id="ts884" x="66.3472900390625" y="60.9375" class="s5">(19.07.2015)</text>
+											<text id="ts885" x="69.8902587890625" y="77.421875" class="s10">Ваграмяны</text>
+										</g>
+									</g>
+									<rect id="r886" class="s7" x="0.5" y="0.5" width="149" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>
